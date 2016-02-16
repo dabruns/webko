@@ -164,6 +164,14 @@ GEM
     rspec-mocks (3.4.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.4.0)
+    rspec-rails (3.4.2)
+      actionpack (>= 3.0, < 4.3)
+      activesupport (>= 3.0, < 4.3)
+      railties (>= 3.0, < 4.3)
+      rspec-core (~> 3.4.0)
+      rspec-expectations (~> 3.4.0)
+      rspec-mocks (~> 3.4.0)
+      rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
     rubocop (0.37.2)
       parser (>= 2.3.0.4, < 3.0)
@@ -225,6 +233,7 @@ DEPENDENCIES
   puma
   rails (= 4.2.5.1)
   rails_12factor
+  rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
