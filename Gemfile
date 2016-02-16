@@ -51,6 +51,9 @@ group :development do
 
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+
+  # Guard Gem
+  gem 'guard'
 end
 
 
