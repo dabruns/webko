@@ -15,6 +15,7 @@
 # this file into your version control system.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160216165349) do
 
   create_table "users", force: :cascade do |t|
@@ -35,6 +36,9 @@ ActiveRecord::Schema.define(version: 20160216165349) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
+=======
+ActiveRecord::Schema.define(version: 0) do
+>>>>>>> 6abeb6cafea04578b78a2f6ee0bd1750e304090e
 =======
 ActiveRecord::Schema.define(version: 0) do
 >>>>>>> 6abeb6cafea04578b78a2f6ee0bd1750e304090e
