@@ -28,6 +28,7 @@ gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
 gem 'devise'
 gem 'cancancan'
 gem 'rolify'
+gem 'activeadmin', github: 'activeadmin'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
