@@ -33,6 +33,9 @@
         <li>
           <a href="#">Contact</a>
         </li>
+        <li>
+          <%= link_to "Log In", new_user_session_path%>
+        </li>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
@@ -55,7 +58,7 @@
 <style>body{padding-top: 70px;}</style>
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
-<%= yield %>
+
 
 </body>
 </html>
