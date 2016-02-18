@@ -26,16 +26,25 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li>
-          <a href="#">About</a>
+          <a href="#">Kalendar</a>
         </li>
         <li>
-          <a href="#">Services</a>
+          <a href="#">Benutzer anlegen</a>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <a href="#">Neuigkeiten erstellen</a>
         </li>
         <li>
-          <%= link_to "Log In", new_user_session_path%>
+          <%if user_signed_in? %>
+            <li>
+              <a href ="">Eingeloggt als:  <strong><%= current_user.email %></strong></a>
+            </li>
+            <li>
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
+            </li>
+          <% else %>
+            <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
+            <%end %>
         </li>
       </ul>
     </div>
