@@ -72,3 +72,4 @@ class CareventsController < ApplicationController
       params.require(:carevent).permit(:title, :description, :start_time, :end_time, :car_id)
     end
 end
+
