@@ -5,7 +5,7 @@
  # email
   <div class="field">
     <%= f.label :login %><br />
-    <%= f.email_field :login, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+    <%= f.text_field :login, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
   </div>
 
   <div class="actions">
