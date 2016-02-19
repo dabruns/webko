@@ -272,6 +272,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   simple_calendar
   spring
+  sprockets-rails
   sqlite3
   turbolinks
   tzinfo-data

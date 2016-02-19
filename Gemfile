@@ -28,6 +28,7 @@ gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_calendar'
+gem 'sprockets-rails'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
