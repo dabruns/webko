@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @carevent.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @carevent.description %>
+</p>
+
+<p>
+  <strong>Car:</strong>
+  <%= @carevent.car.name %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @carevent.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @carevent.end_time %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_carevent_path(@carevent) %> |
+<%= link_to 'Back', carevents_path %>

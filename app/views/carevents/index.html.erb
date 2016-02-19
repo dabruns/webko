@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Carevents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Car</th>
+      <th>Start time</th>
+      <th>End time</th>
+
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @carevents.each do |carevent| %>
+      <tr>
+        <td><%= carevent.title %></td>
+        <td><%= carevent.description %></td>
+        <td><%= carevent.car.name %></td>
+        <td><%= carevent.start_time %></td>
+        <td><%= carevent.end_time %></td>
+
+        <td><%= link_to 'Show', carevent %></td>
+        <td><%= link_to 'Edit', edit_carevent_path(carevent) %></td>
+        <td><%= link_to 'Destroy', carevent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Carevent', new_carevent_path %>
+
+<br>
+<br>
+
+<%= month_calendar events: @carevents do |date, carevents| %>
+    <%= date %>
+
+    <% carevents.each do |carevent| %>
+        <div>
+          <%= carevent.title %>
+        </div>
+    <% end %>
+<% end %>
+
