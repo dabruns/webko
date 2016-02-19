@@ -49,5 +49,11 @@
     <% end %>
 <% end %>
 
+<h2>Insgesamt verfügbare Kraftfahrzeuge</h2>
 
+<% @cars.each do |car| %>
+<ul>
+  <li><%= car.name %></li>
+</ul>
 
+<% end %>

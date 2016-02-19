@@ -11,3 +11,7 @@
 Car.create(name: 'VW Golf')
 Car.create(name: 'Mercedes A')
 Car.create(name: 'Fiat Punto')
+
+Room.create(name: 'B405')
+Room.create(name: 'C400')
+Room.create(name: 'D210')

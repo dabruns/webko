@@ -5,6 +5,7 @@ class CareventsController < ApplicationController
   # GET /carevents.json
   def index
     @carevents = Carevent.all
+    @cars = Car.all
   end
 
   # GET /carevents/1
