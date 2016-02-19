@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Carevents</h1>
+<h1>Kalender zur Kfz-Nutzung</h1>
 
-<table>
+<table width=100%>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Car</th>
-      <th>Start time</th>
-      <th>End time</th>
+      <th>Titel</th>
+      <th>Beschreibung</th>
+      <th>Kfz</th>
+      <th>Start</th>
+      <th>Ende</th>
 
       <th colspan="3"></th>
     </tr>
@@ -24,9 +24,9 @@
         <td><%= carevent.start_time %></td>
         <td><%= carevent.end_time %></td>
 
-        <td><%= link_to 'Show', carevent %></td>
-        <td><%= link_to 'Edit', edit_carevent_path(carevent) %></td>
-        <td><%= link_to 'Destroy', carevent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Anzeigen', carevent %></td>
+        <td><%= link_to 'Editieren', edit_carevent_path(carevent) %></td>
+        <td><%= link_to 'Löschen', carevent, method: :delete, data: { confirm: 'Sind Sie sicher' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,7 +34,7 @@
 
 <br>
 
-<%= link_to 'New Carevent', new_carevent_path %>
+<%= link_to 'Neuen Eintrag erstellen', new_carevent_path %>
 
 <br>
 <br>
@@ -44,7 +44,9 @@
 
     <% carevents.each do |carevent| %>
         <div>
-          <%= carevent.title %>
+          <%= link_to carevent.title, carevent %>
+          <br>
+          <%= carevent.car.name %>
         </div>
     <% end %>
 <% end %>

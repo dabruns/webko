@@ -28,7 +28,7 @@ class CareventsController < ApplicationController
 
     respond_to do |format|
       if @carevent.save
-        format.html { redirect_to @carevent, notice: 'Carevent was successfully created.' }
+        format.html { redirect_to @carevent, notice: 'Eintrag wurde erfolgreich erstellt.' }
         format.json { render :show, status: :created, location: @carevent }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class CareventsController < ApplicationController
   def update
     respond_to do |format|
       if @carevent.update(carevent_params)
-        format.html { redirect_to @carevent, notice: 'Carevent was successfully updated.' }
+        format.html { redirect_to @carevent, notice: 'Eintrag wurde erfolgreich geupdated' }
         format.json { render :show, status: :ok, location: @carevent }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class CareventsController < ApplicationController
   def destroy
     @carevent.destroy
     respond_to do |format|
-      format.html { redirect_to carevents_url, notice: 'Carevent was successfully destroyed.' }
+      format.html { redirect_to carevents_url, notice: 'Eintrag wurde erfolgreich gelöscht.' }
       format.json { head :no_content }
     end
   end
