@@ -34,10 +34,4 @@
 
 <%= month_calendar events: @vacationplans do |date, vacationsplans| %>
     <%= date %>
-
-    <% vacationsplans.each do |vacationsplan| %>
-        <div>
-          <%= link_to vacationsplan.user.name, vacationsplan %>
-        </div>
     <% end %>
-<% end %>
