@@ -30,9 +30,9 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'cancancan'
 gem 'rolify'
 gem 'activeadmin', github: 'activeadmin'
-
 gem 'simple_calendar'
 gem 'sprockets-rails'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
