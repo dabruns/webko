@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20160220130145) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
   create_table "carevents", force: :cascade do |t|
+    t.integer  "user_id"
     t.string   "title"
     t.text     "description"
     t.datetime "start_time"
@@ -57,6 +58,7 @@ ActiveRecord::Schema.define(version: 20160220130145) do
   end
 
   add_index "carevents", ["car_id"], name: "index_carevents_on_car_id"
+  add_index "carevents", ["user_id"], name: "index_carevents_on_user_id"
 
   create_table "cars", force: :cascade do |t|
     t.string   "name"
@@ -76,6 +78,7 @@ ActiveRecord::Schema.define(version: 20160220130145) do
   add_index "roles", ["name"], name: "index_roles_on_name"
 
   create_table "roomplans", force: :cascade do |t|
+    t.integer  "user_id"
     t.integer  "room_id"
     t.text     "usage"
     t.datetime "start_time"
@@ -85,6 +88,7 @@ ActiveRecord::Schema.define(version: 20160220130145) do
   end
 
   add_index "roomplans", ["room_id"], name: "index_roomplans_on_room_id"
+  add_index "roomplans", ["user_id"], name: "index_roomplans_on_user_id"
 
   create_table "rooms", force: :cascade do |t|
     t.string   "name"
@@ -93,25 +97,22 @@ ActiveRecord::Schema.define(version: 20160220130145) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
+    t.string   "email",               default: "", null: false
+    t.string   "encrypted_password",  default: "", null: false
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",       default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.string   "first_name"
     t.string   "last_name"
     t.string   "username"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   add_index "users", ["username"], name: "index_users_on_username", unique: true
 
   create_table "users_roles", id: false, force: :cascade do |t|
