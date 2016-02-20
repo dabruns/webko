@@ -1,9 +1,7 @@
-class CreateRoomplans < ActiveRecord::Migration
+class CreateVacationplans < ActiveRecord::Migration
   def change
-    create_table :roomplans do |t|
+    create_table :vacationplans do |t|
       t.references :user, index: true, foreign_key: true
-      t.references :room, index: true, foreign_key: true
-      t.text :usage
       t.datetime :start_time
       t.datetime :end_time
 

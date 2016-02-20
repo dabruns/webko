@@ -6,6 +6,7 @@ class CareventsController < ApplicationController
   def index
     @carevents = Carevent.all
     @cars = Car.all
+
   end
 
   # GET /carevents/1

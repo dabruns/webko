@@ -1,7 +1,7 @@
 <%= form_for(@carevent) do |f| %>
   <% if @carevent.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@carevent.errors.count, "error") %> verhindert die Speicherung des Eintrags.</h2>
+      <h2><%= pluralize(@carevent.errors.count, "error") %> verhindert die Speicherung des Eintrags:</h2>
 
       <ul>
       <% @carevent.errors.full_messages.each do |message| %>
@@ -10,7 +10,10 @@
       </ul>
     </div>
   <% end %>
-
+<!--    <div class="field">
+      <%= f.label 'Nutzer' %><br>
+      <%= current_user.email %>
+    </div>-->
   <div class="field">
     <%= f.label 'Titel' %><br>
     <%= f.text_field :title %>
