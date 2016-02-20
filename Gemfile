@@ -32,6 +32,7 @@ gem 'rolify'
 gem 'activeadmin', github: 'activeadmin'
 gem 'simple_form'
 gem 'kaminari'
+gem 'rails-i18n'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

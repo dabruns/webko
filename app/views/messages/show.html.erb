@@ -1,0 +1,15 @@
+<p>
+ <h1> <%= @messages.title %></h1>
+
+</p>
+
+<p>
+  <%= @messages.description %>
+</p>
+<br>
+<p>
+  Verfasst am:  <%= @messages.date.strftime('%d.%m.%y')%>
+</p>
+
+<br>
+<%= link_to "Zurück zur Startseite", messages_index_path%>

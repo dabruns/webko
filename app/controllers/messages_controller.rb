@@ -1,10 +1,19 @@
 class MessagesController < ApplicationController
   def index
-    @messages =Message.page(params[:page]).per(10)
+    @messages =Message.page(params[:page]).per(6)
   end
 
   def new
     @messages = Message.new
+  end
+
+  def show
+    @messages=Message.find(params[:id])
+
+    respond_to do |format|
+      format.html #show.html.erb
+      format.json {render :json =>@messages}
+    end
   end
 
   def create
