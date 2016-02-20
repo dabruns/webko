@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
   devise_for :users
   #root 'welcome#index'
   resources :users, only:[:index, :show, :edit, :update]

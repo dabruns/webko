@@ -27,6 +27,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'cancancan'
+gem 'rolify'
+gem 'activeadmin', github: 'activeadmin'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -57,6 +60,9 @@ group :development do
   # Rspec und rubocop
   gem 'guard-rspec', require: false
   gem 'guard-rubocop'
+
+  gem 'factory_girl_rails'
+  gem 'faker'
 end
 
 group :production do
