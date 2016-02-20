@@ -20,8 +20,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-# puma webserver
-gem 'puma'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
@@ -73,4 +71,5 @@ group :production do
   # postgresql for heroku
   gem 'pg'
   gem 'rails_12factor'
+  gem 'puma'
 end
