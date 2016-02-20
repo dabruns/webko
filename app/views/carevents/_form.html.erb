@@ -1,7 +1,7 @@
 <%= form_for(@carevent) do |f| %>
   <% if @carevent.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@carevent.errors.count, "error") %> prohibited this carevent from being saved:</h2>
+      <h2><%= pluralize(@carevent.errors.count, "error") %> verhindert die Speicherung des Eintrags.</h2>
 
       <ul>
       <% @carevent.errors.full_messages.each do |message| %>

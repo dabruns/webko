@@ -43,7 +43,7 @@ class CareventsController < ApplicationController
   def update
     respond_to do |format|
       if @carevent.update(carevent_params)
-        format.html { redirect_to @carevent, notice: 'Eintrag wurde erfolgreich geupdated' }
+        format.html { redirect_to @carevent, notice: 'Eintrag wurde erfolgreich aktualisiert.' }
         format.json { render :show, status: :ok, location: @carevent }
       else
         format.html { render :edit }

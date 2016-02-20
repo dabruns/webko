@@ -1,24 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Room:</strong>
+  <strong>Raum:</strong>
   <%= @roomplan.room %>
 </p>
 
 <p>
-  <strong>Usage:</strong>
+  <strong>Benutzung:</strong>
   <%= @roomplan.usage %>
 </p>
 
 <p>
-  <strong>Start time:</strong>
+  <strong>Start:</strong>
   <%= @roomplan.start_time %>
 </p>
 
 <p>
-  <strong>End time:</strong>
+  <strong>Ende:</strong>
   <%= @roomplan.end_time %>
 </p>
 
-<%= link_to 'Edit', edit_roomplan_path(@roomplan) %> |
-<%= link_to 'Back', roomplans_path %>
+<%= link_to 'Editieren', edit_roomplan_path(@roomplan) %> |
+<%= link_to 'Zurück', roomplans_path %>

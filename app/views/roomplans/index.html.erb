@@ -1,16 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Roomplans</h1>
+<h1>Kalender zur Raumbelegung</h1>
 
-<h2><%= link_to 'New Roomplan', new_roomplan_path %></h2>
+<h2><%= link_to 'Neue Raumbelegung', new_roomplan_path %></h2>
 
-<table>
+<table width=100% border="1">
   <thead>
     <tr>
-      <th>Room</th>
-      <th>Usage</th>
-      <th>Start time</th>
-      <th>End time</th>
+      <th>Raum</th>
+      <th>Benutzung</th>
+      <th>Start</th>
+      <th>Ende</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,9 +22,9 @@
         <td><%= roomplan.usage %></td>
         <td><%= roomplan.start_time %></td>
         <td><%= roomplan.end_time %></td>
-        <td><%= link_to 'Show', roomplan %></td>
-        <td><%= link_to 'Edit', edit_roomplan_path(roomplan) %></td>
-        <td><%= link_to 'Destroy', roomplan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Anzeigen', roomplan %></td>
+        <td><%= link_to 'Editieren', edit_roomplan_path(roomplan) %></td>
+        <td><%= link_to 'Löschen', roomplan, method: :delete, data: { confirm: 'Sind Sie sicher?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -39,9 +39,7 @@
 
     <% roomplans.each do |roomplan| %>
         <div>
-          <%= link_to roomplan.title, roomplan %>
-          <br>
-          <%= roomplan.room.name %>
+          <%= link_to roomplan.room.name, roomplan %>
         </div>
     <% end %>
 <% end %>
