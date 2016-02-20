@@ -270,6 +270,8 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     shellany (0.0.1)
+    simple_calendar (2.0.6)
+      rails (>= 3.0)
     slop (3.6.0)
     spring (1.6.3)
     sprockets (3.5.2)
@@ -329,7 +331,9 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  simple_calendar
   spring
+  sprockets-rails
   sqlite3
   turbolinks
   tzinfo-data

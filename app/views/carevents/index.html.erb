@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Kalender zur Kfz-Nutzung</h1>
+
+<h2><%= link_to 'Neuen Eintrag erstellen', new_carevent_path %></h2>
+
+<table width=100% border="1">
+  <thead>
+    <tr>
+      <th>Titel</th>
+      <th>Beschreibung</th>
+      <th>Kfz</th>
+      <th>Start</th>
+      <th>Ende</th>
+
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @carevents.each do |carevent| %>
+      <tr>
+        <td><%= carevent.title %></td>
+        <td><%= carevent.description %></td>
+        <td><%= carevent.car.name %></td>
+        <td><%= carevent.start_time %></td>
+        <td><%= carevent.end_time %></td>
+
+        <td><%= link_to 'Anzeigen', carevent %></td>
+        <td><%= link_to 'Editieren', edit_carevent_path(carevent) %></td>
+        <td><%= link_to 'Löschen', carevent, method: :delete, data: { confirm: 'Sind Sie sicher?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<br>
+
+<%= month_calendar events: @carevents do |date, carevents| %>
+    <%= date %>
+
+    <% carevents.each do |carevent| %>
+        <div>
+          <%= link_to carevent.title, carevent %>
+          <br>
+          <%= carevent.car.name %>
+        </div>
+    <% end %>
+<% end %>
+
+<h2>Insgesamt verfügbare Kraftfahrzeuge</h2>
+
+<% @cars.each do |car| %>
+<ul>
+  <li><%= car.name %></li>
+</ul>
+
+<% end %>

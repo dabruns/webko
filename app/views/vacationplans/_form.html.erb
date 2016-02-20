@@ -1,0 +1,29 @@
+<%= form_for(@vacationplan) do |f| %>
+  <% if @vacationplan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vacationplan.errors.count, "error") %> verhindert die Speicherung des Eintrags:</h2>
+
+      <ul>
+      <% @vacationplan.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<!--  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>-->
+  <div class="field">
+    <%= f.label 'Start' %><br>
+    <%= f.datetime_select :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label 'Ende' %><br>
+    <%= f.datetime_select :end_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit value='Abschicken' %>
+  </div>
+<% end %>

@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
   ActiveAdmin.routes(self)
+  resources :vacationplans
+  resources :roomplans
+  resources :carevents
   devise_for :users
   #root 'welcome#index'
   resources :users, only:[:index, :show, :edit, :update]
-  get 'welcome/index'
+
   root 'welcome#index'
+
+  get 'index' => 'welcome#index'
+  get 'carevent' => 'carevents#index'
+  get 'roomplan' => 'roomplans#index'
+  get 'vacationplan' => 'vacationplans#index'
   # The priority is based upon order
   # of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
