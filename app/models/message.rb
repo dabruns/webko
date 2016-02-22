@@ -4,4 +4,5 @@ class Message < ActiveRecord::Base
       validates :date, presence: true
       validates :important, presence: false
 
+
 end

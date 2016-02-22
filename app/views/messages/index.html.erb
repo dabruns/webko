@@ -2,13 +2,17 @@
 
 <% @messages.each do |message| %>
     <div class="message">
-      <h4><%= link_to message.title, message%></h4>
+      <h4><%= link_to message.title, message%>
       <% if message.important %>
-         <font color="red">Achtung Wichtig!</font>
+         <font color="red">- Wichtig!</font>
       <% end %>
-      <p><%= message.description.first(120) +"..." %></p>
+        <p>Verfasst am: <%= message.date.strftime('%d.%m.%y') %></p></h4>
+      <p><%= message.description.truncate_words(40)  %>
+      <% if message.description.length >120 %>
+          ... <%= link_to "[Weiterlesen]", message%>
+            </p>
+      <% end %>
 
-      <p><%= message.date.strftime('%d.%m.%y') %></p>
     </div>
 <hr>
 <% end %>
