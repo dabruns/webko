@@ -2,8 +2,8 @@ ValidatesTimeliness.setup do |config|
   # Extend ORM/ODMs for full support (:active_record included).
   config.extend_orms = [ :active_record ]
   #
- Default timezone
- config.default_timezone = :utc+1
+ # Default timezone
+  config.default_timezone = :utc
   #
   # Set the dummy date part for a time type values.
   # config.dummy_date_for_time_type = [ 2000, 1, 1 ]
@@ -27,8 +27,11 @@ config.restriction_shorthand_symbols.update(
 config.use_plugin_parser = true
   #
   # Add one or more formats making them valid. e.g. add_formats(:date, 'd(st|rd|th) of mmm, yyyy')
-  # config.parser.add_formats(:datetime )
   #
+  #config.parser.add_formats(:datetime, 'dd-mm-yyyy' )
+  #
+
+
   # Remove one or more formats making them invalid. e.g. remove_formats(:date, 'dd/mm/yyy')
   # config.parser.remove_formats()
   #
