@@ -27,6 +27,8 @@ class CareventsController < ApplicationController
   # POST /carevents.json
   def create
     @carevent = Carevent.new(carevent_params)
+    @carevent.user_id = current_user.id
+
 
     respond_to do |format|
       if @carevent.save

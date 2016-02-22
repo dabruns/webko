@@ -25,6 +25,7 @@ class VacationplansController < ApplicationController
   # POST /vacationplans.json
   def create
     @vacationplan = Vacationplan.new(vacationplan_params)
+    @vacationplan.user_id = current_user.id
 
     respond_to do |format|
       if @vacationplan.save

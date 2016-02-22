@@ -7,7 +7,7 @@
 <table width=100% border="1">
   <thead>
     <tr>
-      <th>Benutzer</th>
+      <th>Mitarbeiter</th>
       <th>Start</th>
       <th>Ende</th>
       <th colspan="3"></th>
@@ -17,7 +17,7 @@
   <tbody>
     <% @vacationplans.each do |vacationplan| %>
       <tr>
-        <td><%= vacationplan.user %></td>
+        <td><%= vacationplan.user.first_name %> <%= vacationplan.user.last_name %></td>
         <td><%= vacationplan.start_time %></td>
         <td><%= vacationplan.end_time %></td>
         <td><%= link_to 'Anzeigen', vacationplan %></td>
@@ -34,4 +34,9 @@
 
 <%= month_calendar events: @vacationplans do |date, vacationsplans| %>
     <%= date %>
+      <% vacationsplans.each do |vacationsplan| %>
+        <div>
+          <%= vacationsplan.user.first_name %> <%= vacationsplan.user.last_name %>
+        </div>
     <% end %>
+<% end %>

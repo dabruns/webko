@@ -7,6 +7,7 @@
 <table width=100% border="1">
   <thead>
     <tr>
+      <th>Mitarbeiter</th>
       <th>Titel</th>
       <th>Beschreibung</th>
       <th>Kfz</th>
@@ -20,6 +21,7 @@
   <tbody>
     <% @carevents.each do |carevent| %>
       <tr>
+        <td><%= carevent.user.first_name %> <%= carevent.user.last_name %></td>
         <td><%= carevent.title %></td>
         <td><%= carevent.description %></td>
         <td><%= carevent.car.name %></td>
@@ -42,6 +44,8 @@
 
     <% carevents.each do |carevent| %>
         <div>
+          <%= carevent.user.first_name %> <%= carevent.user.last_name %>
+          <br>
           <%= link_to carevent.title, carevent %>
           <br>
           <%= carevent.car.name %>

@@ -26,6 +26,7 @@ class RoomplansController < ApplicationController
   # POST /roomplans.json
   def create
     @roomplan = Roomplan.new(roomplan_params)
+    @roomplan.user_id = current_user.id
 
     respond_to do |format|
       if @roomplan.save

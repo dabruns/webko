@@ -7,6 +7,7 @@
 <table width=100% border="1">
   <thead>
     <tr>
+      <th>Mitarbeiter</th>
       <th>Raum</th>
       <th>Benutzung</th>
       <th>Start</th>
@@ -18,6 +19,7 @@
   <tbody>
     <% @roomplans.each do |roomplan| %>
       <tr>
+        <td><%= roomplan.user.first_name %> <%= roomplan.user.last_name %></td>
         <td><%= roomplan.room.name %></td>
         <td><%= roomplan.usage %></td>
         <td><%= roomplan.start_time %></td>
@@ -39,6 +41,8 @@
 
     <% roomplans.each do |roomplan| %>
         <div>
+          <%= roomplan.user.first_name %> <%= roomplan.user.last_name %>
+          <br>
           <%= link_to roomplan.room.name, roomplan %>
         </div>
     <% end %>
