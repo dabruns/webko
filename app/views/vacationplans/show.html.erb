@@ -11,12 +11,12 @@
 
 <p>
   <strong>Start::</strong>
-  <%= @vacationplan.start_time %>
+  <%= @vacationplan.start_time.strftime("%d.%m.%Y %H:%M") %>
 </p>
 
 <p>
   <strong>Ende:</strong>
-  <%= @vacationplan.end_time %>
+  <%= @vacationplan.end_time.strftime("%d.%m.%Y %H:%M") %>
 </p>
 
 <%= link_to 'Editieren', edit_vacationplan_path(@vacationplan) %> |

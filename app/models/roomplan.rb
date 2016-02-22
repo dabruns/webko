@@ -4,6 +4,6 @@ class Roomplan < ActiveRecord::Base
   validates :usage, presence:  true
   validates_datetime :start_time, :before => :end_time, :after => :today
   validates_datetime :end_time, :after => :start_time, :after => :today
-  validates_time :start_time, :between =>  '7:00am'..'5:00pm'
-  validates_time :end_time, :between =>  '7:00am'..'5:00pm'
+  validates_time :start_time, :between =>  '8:00am'..'7:00pm'
+  validates_time :end_time, :between =>  '8:00am'..'7:00pm'
 end

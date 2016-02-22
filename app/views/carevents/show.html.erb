@@ -22,12 +22,12 @@
 
 <p>
   <strong>Start:</strong>
-  <%= @carevent.start_time %>
+  <%= @carevent.start_time.strftime("%d.%m.%Y %H:%M") %>
 </p>
 
 <p>
   <strong>Ende:</strong>
-  <%= @carevent.end_time %>
+  <%= @carevent.end_time.strftime("%d.%m.%Y %H:%M") %>
 </p>
 
 

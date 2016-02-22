@@ -4,46 +4,22 @@
 
 <h2><%= link_to 'Neue Raumbelegung', new_roomplan_path %></h2>
 
-<table width=100% border="1">
-  <thead>
-    <tr>
-      <th>Mitarbeiter</th>
-      <th>Raum</th>
-      <th>Benutzung</th>
-      <th>Start</th>
-      <th>Ende</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @roomplans.each do |roomplan| %>
-      <tr>
-        <td><%= roomplan.user.first_name %> <%= roomplan.user.last_name %></td>
-        <td><%= roomplan.room.name %></td>
-        <td><%= roomplan.usage %></td>
-        <td><%= roomplan.start_time %></td>
-        <td><%= roomplan.end_time %></td>
-        <td><%= link_to 'Anzeigen', roomplan %></td>
-        <td><%= link_to 'Editieren', edit_roomplan_path(roomplan) %></td>
-        <td><%= link_to 'Löschen', roomplan, method: :delete, data: { confirm: 'Sind Sie sicher?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
 <br>
 <br>
-
 
 <%= month_calendar events: @roomplans do |date, roomplans| %>
-    <%= date %>
+    <b><%= date.strftime("%d.%m.%Y") %></b>
 
     <% roomplans.each do |roomplan| %>
         <div>
           <%= roomplan.user.first_name %> <%= roomplan.user.last_name %>
           <br>
           <%= link_to roomplan.room.name, roomplan %>
+          <br>
+          <%= roomplan.start_time.strftime("%H:%M") %> - <%= roomplan.end_time.strftime("%H:%M") %>
+          <br>
+          <%= link_to 'A', roomplan %> - <%= link_to 'E', edit_roomplan_path(roomplan) %> - <%= link_to 'L', roomplan, method: :delete, data: { confirm: 'Sind Sie sicher?' } %>
+          <hr>
         </div>
     <% end %>
 <% end %>

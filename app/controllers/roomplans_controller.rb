@@ -1,11 +1,23 @@
 class RoomplansController < ApplicationController
   before_action :set_roomplan, only: [:show, :edit, :update, :destroy]
+  before_action :check_auth, only: [:edit, :update, :destroy]
+  before_action :check_available, only: [:create, :update, :edit]
 
   # GET /roomplans
   # GET /roomplans.json
   def index
     @roomplans = Roomplan.all
     @rooms = Room.all
+  end
+
+  def check_available
+  end
+
+  def check_auth
+    if current_user.id != @roomplan.user_id
+      flash[:notice] = 'Sie können Einträge anderer Nutzer nicht ändern / löschen'
+      redirect_to roomplan_path
+    end
   end
 
   # GET /roomplans/1
