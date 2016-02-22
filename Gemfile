@@ -31,6 +31,7 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'simple_calendar'
 gem 'sprockets-rails'
 gem 'rails-i18n'
+gem 'validates_timeliness'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
