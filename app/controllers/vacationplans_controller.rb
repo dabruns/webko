@@ -1,7 +1,6 @@
 class VacationplansController < ApplicationController
   before_action :set_vacationplan, only: [:show, :edit, :update, :destroy]
   before_action :check_auth, only: [:edit, :update, :destroy]
-  before_action :check_available, only: [:create, :update, :edit]
 
   # GET /vacationplans
   # GET /vacationplans.json
@@ -9,8 +8,6 @@ class VacationplansController < ApplicationController
     @vacationplans = Vacationplan.all
   end
 
-  def check_available
-  end
 
   def check_auth
     if current_user.id != @vacationplan.user_id

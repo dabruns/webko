@@ -9,14 +9,17 @@
 
 <%= month_calendar events: @vacationplans do |date, vacationplans| %>
     <b><%= date.strftime("%d.%m.%Y") %></b>
-      <% vacationplans.each do |vacationplan| %>
-        <div>
-          <%= vacationplan.user.first_name %> <%= vacationplan.user.last_name %>
+    <% vacationplans.each do |vacationplan| %>
+    <div>
+    <%= date.strftime("%d.%m.%Y") %> - <%= vacationplan.end_time.strftime("%d.%m.%Y") %>
           <br>
-          <%= vacationplan.start_time.strftime("%H:%M") %> - <%= vacationplan.end_time.strftime("%H:%M") %>
+          <%= vacationplan.user.first_name %> <%= vacationplan.user.last_name %>
           <br>
           <%= link_to 'A', vacationplan %> - <%= link_to 'E', edit_vacationplan_path(vacationplan) %> - <%= link_to 'L', vacationplan, method: :delete, data: { confirm: 'Sind Sie sicher?' } %>
           <hr>
         </div>
     <% end %>
 <% end %>
+<p>
+  Legende:<br>A -> Anzeigen, E -> Editieren, L -> Löschen
+</p>

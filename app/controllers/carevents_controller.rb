@@ -1,7 +1,7 @@
 class CareventsController < ApplicationController
   before_action :set_carevent, only: [:show, :edit, :update, :destroy]
   before_action :check_auth, only: [:edit, :update, :destroy]
-  before_action :check_available, only: [:create, :update, :edit]
+
 
   public
   # GET /carevents
@@ -11,15 +11,13 @@ class CareventsController < ApplicationController
     @cars = Car.all
   end
 
-  def check_available
-  end
 
   def check_auth
-    if current_user.id != @carevent.user_id
-      flash[:notice] = 'Sie können Einträge anderer Nutzer nicht ändern / löschen'
-      redirect_to carevent_path
-    end
-    end
+      if current_user.id != @carevent.user_id
+        flash[:notice] = 'Sie können Einträge anderer Nutzer nicht ändern / löschen'
+        redirect_to carevent_path
+      end
+  end
 
   # GET /carevents/1
   # GET /carevents/1.json

@@ -1,7 +1,6 @@
 class RoomplansController < ApplicationController
   before_action :set_roomplan, only: [:show, :edit, :update, :destroy]
   before_action :check_auth, only: [:edit, :update, :destroy]
-  before_action :check_available, only: [:create, :update, :edit]
 
   # GET /roomplans
   # GET /roomplans.json
@@ -10,8 +9,6 @@ class RoomplansController < ApplicationController
     @rooms = Room.all
   end
 
-  def check_available
-  end
 
   def check_auth
     if current_user.id != @roomplan.user_id

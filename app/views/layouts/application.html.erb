@@ -19,7 +19,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand"<%= link_to "Startseite" , index_path%></a>
+      <a class="navbar-brand"<%= link_to 'Startseite' , index_path %></a>
 
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -30,9 +30,9 @@
             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Kalender
               <span class="caret"></span></button>
             <ul class="dropdown-menu">
-              <li><a href="carevent">Kfz-Nutzung</a></li>
-              <li><a href="vacationplan">Urlaubsplan</a></li>
-              <li><a href="roomplan">Raumbelegung</a></li>
+              <li><%= link_to 'Kfz-Nutzung', carevents_path %></li>
+              <li><%= link_to 'Urlaubsplan', vacationplans_path %></li>
+              <li><%= link_to 'Raumbelegung', roomplans_path %></li>
             </ul>
           </div>
         </li>

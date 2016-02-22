@@ -4,15 +4,15 @@ Rails.application.routes.draw do
   resources :roomplans
   resources :carevents
   devise_for :users
-  #root 'welcome#index'
+
   resources :users, only:[:index, :show, :edit, :update]
 
   root 'welcome#index'
 
   get 'index' => 'welcome#index'
-  get 'carevent' => 'carevents#index'
-  get 'roomplan' => 'roomplans#index'
-  get 'vacationplan' => 'vacationplans#index'
+  get 'carevents/:id' => 'carevents#index'
+  get 'roomplans/:id' => 'roomplans#index'
+  get 'vacationplans/:id' => 'vacationplans#index'
   # The priority is based upon order
   # of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
