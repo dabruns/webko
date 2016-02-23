@@ -19,8 +19,16 @@
 <h2>Kommentare</h2>
 
 <% @message.comments.each do |comment| %>
+<div class="comment">
+  <p id="user"> <%= current_user.email %> schreibt:</p><p>
 <%= comment.text%>
+  </p>
+</div>
 <%end%>
+<br>
 
-
+<%= form_for [@message, @message.comments.build] do |f| %>
+  <p><%= f.text_area :text, :size => '10x10' %></p>
+  <p><%= f.submit "Kommentar senden"%></p>
+<%end%>
 
