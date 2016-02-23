@@ -15,8 +15,16 @@ ActiveAdmin.register UserGroup do
 # end
 
   index do
-    column 'Gruppe', :group_id
-    column 'Benutzer', :user_id
+    column 'Gruppe', :group_id, :sortable => :group_id do |group|
+      div do
+        Group.find(group).title
+      end
+    end
+    column 'Benutzer', :user_id, :sortable => :user_id do |user|
+      div :class => "user" do
+        User.find(user).username
+      end
+    end
     actions
   end
 
