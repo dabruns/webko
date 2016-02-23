@@ -14,7 +14,7 @@
           <% if message.important %>
              <font color="red">- Wichtig!</font>
           <% end %>
-            <p>Verfasst am: <%= message.date.strftime('%d.%m.%y') %></p></h4>
+            <p>Verfasst am: <%= message.created_at.strftime('%d.%m.%y') %></p></h4>
           <p><%= message.description.truncate_words(40)  %>
           <% if message.description.length >120 %>
               <%= link_to "[Weiterlesen]", message%>
