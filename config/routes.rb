@@ -14,9 +14,9 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users, only:[:index, :show, :edit, :update]
-  root 'welcome#index'
+  #root 'welcome#index'
 
-  get 'index' => 'welcome#index'
+  #get 'index' => 'welcome#index'
   get 'carevents/:id' => 'carevents#index'
   get 'roomplans/:id' => 'roomplans#index'
   get 'vacationplans/:id' => 'vacationplans#index'
@@ -24,8 +24,8 @@ Rails.application.routes.draw do
   resources :messages do
     resources :comments
   end
- # root 'messages#index' WURDE GEMERGET
- # get 'welcome/index'  WURDE GEMERGET
+  root 'messages#index'
+  get 'welcome/index'
   #root 'welcome#index'
 
   # The priority is based upon order
