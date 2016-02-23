@@ -1,17 +1,26 @@
 
 <div class="message">
 <p>
- <h1> <%= @messages.title %></h1>
+ <h1> <%= @message.title %></h1>
 
 </p>
 
 <p>
-  <%= @messages.description %>
+  <%= @message.description %>
 </p>
 <br>
 <p>
-  Verfasst am:  <%= @messages.created_at.strftime('%d.%m.%y')%>
+  Verfasst am:  <%= @message.created_at.strftime('%d.%m.%y')%>
 </p>
 </div>
 <br>
 <%= link_to "Zurück zur Startseite", messages_index_path%>
+
+<h2>Kommentare</h2>
+
+<% @message.comments.each do |comment| %>
+<%= comment.text%>
+<%end%>
+
+
+

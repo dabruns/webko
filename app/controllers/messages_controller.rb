@@ -2,14 +2,15 @@ class MessagesController < ApplicationController
   def index
     #messages =Message.page(params[:page]).per(6)
     @messages=Message.order('created_at DESC').page(params[:page]).per(5)
+    #@messages=Message.all
   end
 
   def new
-    @messages = Message.new
+    @message = Message.new
   end
 
   def show
-    @messages=Message.find(params[:id])
+    @message=Message.find(params[:id])
 
     respond_to do |format|
       format.html #show.html.erb
