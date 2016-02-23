@@ -3,7 +3,7 @@ ActiveAdmin.register User do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 
-  permit_params :email, :encrypted_password, :first_name, :last_name, :username
+  permit_params :email, :encrypted_password, :first_name, :last_name, :username, :password, :password_confirmation
 
 #  create_table "users", force: :cascade do |t|
 #    t.string   "email",               default: "", null: false
@@ -42,7 +42,8 @@ form do |f|
     f.inputs :first_name
     f.inputs :last_name
     f.inputs :email
-    f.inputs :encrypted_password
+    f.input :password
+    f.input :password_confirmation
   end
   f.actions
 end
