@@ -2,8 +2,7 @@ ActiveAdmin.register User do
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-#
-# permit_params :list, :of, :attributes, :on, :model
+
   permit_params :email, :encrypted_password, :first_name, :last_name, :username
 
 #  create_table "users", force: :cascade do |t|
@@ -21,14 +20,34 @@ ActiveAdmin.register User do
 #    t.string   "last_name"
 #    t.string   "username"
 
-#
-# or
-#
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if params[:action] == 'create' && current_user.admin?
-#   permitted
-# end
+
+  index do
+    column 'Benutzername', :username
+    column 'Vorname', :first_name
+    column 'Nachname', :last_name
+    column :email
+    column 'Password', :encrypted_password
+    column 'Anzahl der Anmeldungen', :sign_in_count
+    column 'Momentan eingelogt um', :current_sign_in_at
+    column 'Zuletzt eingelogt am', :last_sign_in_at
+    actions
+  end
+
+
+  #Die edit formulare bearbeiten
+
+form do |f|
+  f.inputs 'Benutzer erstellen' do
+    f.inputs :username
+    f.inputs :first_name
+    f.inputs :last_name
+    f.inputs :email
+    f.inputs :encrypted_password
+  end
+  f.actions
+end
+
+
 
 
 end
