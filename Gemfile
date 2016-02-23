@@ -34,6 +34,9 @@ gem 'simple_calendar'
 gem 'sprockets-rails'
 gem 'rails-i18n'
 gem 'validates_timeliness'
+gem 'simple_form'
+gem 'kaminari'
+gem 'rails-i18n'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

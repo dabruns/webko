@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'comments/create'
+
+  get 'comments/destroy'
+
+  get 'messages/index'
+
+  get 'messages/new'
+
   ActiveAdmin.routes(self)
   resources :vacationplans
   resources :roomplans
@@ -6,13 +14,20 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users, only:[:index, :show, :edit, :update]
-
   root 'welcome#index'
 
   get 'index' => 'welcome#index'
   get 'carevents/:id' => 'carevents#index'
   get 'roomplans/:id' => 'roomplans#index'
   get 'vacationplans/:id' => 'vacationplans#index'
+
+  resources :messages do
+    resources :comments
+  end
+ # root 'messages#index' WURDE GEMERGET
+ # get 'welcome/index'  WURDE GEMERGET
+  #root 'welcome#index'
+
   # The priority is based upon order
   # of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
