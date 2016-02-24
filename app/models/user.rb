@@ -1,3 +1,4 @@
+# Model fuer die Benutzer + Code den das Rolify gem benoetigt
 class User < ActiveRecord::Base
   rolify
   # Include default devise modules. Others available are:

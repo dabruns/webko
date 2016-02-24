@@ -1,3 +1,4 @@
+# Der Controller wird fuer die Urlaubsplanung benoetigt.
 class VacationplansController < ApplicationController
   before_action :set_vacationplan, only: [:show, :edit, :update, :destroy]
   before_action :check_auth, only: [:edit, :update, :destroy]

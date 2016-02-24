@@ -1,3 +1,5 @@
+# Dieses Model wird vom gem CanCan benoetigt
+# und definiert die Berechtigungen der einzelnen Nutzer
 class Ability
   include CanCan::Ability
 
@@ -17,13 +19,6 @@ class Ability
       # nicht regestrierte nutzer
       can :read, WelcomeController
     end
-
-    #   user ||= User.new # guest user (not logged in)
-    #   if user.admin?
-    #     can :manage, :all
-    #   else
-    #     can :read, :all
-    #   end
     #
     # The first argument to `can` is the action you are giving the user
     # permission to do.

@@ -1,3 +1,4 @@
+# Der Controller wird fuer die Verwaltung der Benutzer benoetigt
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update] # probably want to keep using this
 
