@@ -1,7 +1,7 @@
 <%= form_for(@roomplan) do |f| %>
   <% if @roomplan.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@roomplan.errors.count, "error") %> verhindert die Speicherung des Eintrags:</h2>
+      <h2><%= pluralize(@roomplan.errors.count, "error") %> verhindert/verhindern die Speicherung des Eintrags:</h2>
 
       <ul>
       <% @roomplan.errors.full_messages.each do |message| %>
