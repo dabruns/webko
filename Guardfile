@@ -29,6 +29,16 @@ group :red_green_refactor, halt_on_fail: true do
   guard :rubocop do
     # ...
   end
+
+end
+
+# Guard::RSpec 4.0 now uses a simpler approach with the new cmd option that
+# let you precisely define which rspec command will be launched on each run.
+# This option is required due to the number of different ways possible to
+# invoke rspec, the template now includes a default that should work for
+# most applications but may not be optimal for all.
+guard :rspec, cmd: "bundle exec rspec" do
+  # ...
 end
 
 # Note: The cmd option is now required due to the increasing number of ways
