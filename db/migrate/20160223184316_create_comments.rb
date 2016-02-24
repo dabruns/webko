@@ -1,3 +1,4 @@
+# Tabelle um Kommentare zu den Nachrichten am schwarzen Brett zu schreiben
 class CreateComments < ActiveRecord::Migration
   def change
     create_table :comments do |t|

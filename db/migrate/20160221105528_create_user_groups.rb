@@ -1,3 +1,4 @@
+# Zuordnung von Gruppen zu Benutzer
 class CreateUserGroups < ActiveRecord::Migration
   def change
     create_table :user_groups do |t|

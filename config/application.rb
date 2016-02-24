@@ -7,6 +7,7 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 module Webko
+  # Die Configuration die global fuer die ganze Application gilt
   class Application < Rails::Application
     # Settings in config/environments/* take precedence
     # over those specified here.

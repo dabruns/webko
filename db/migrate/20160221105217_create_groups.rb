@@ -1,3 +1,4 @@
+# Tabelle für die Gruppen erstellt
 class CreateGroups < ActiveRecord::Migration
   def change
     create_table :groups do |t|

@@ -1,3 +1,5 @@
+# Von Active Admin erstellte Comments Tabelle
+# Wird vll noch geloescht
 class CreateActiveAdminComments < ActiveRecord::Migration
   def self.up
     create_table :active_admin_comments do |t|

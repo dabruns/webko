@@ -1,3 +1,4 @@
+# Die Autos Tabelle
 class CreateCars < ActiveRecord::Migration
   def change
     create_table :cars do |t|

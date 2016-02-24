@@ -1,3 +1,4 @@
+# Der Raumkalender
 class CreateRoomplans < ActiveRecord::Migration
   def change
     create_table :roomplans do |t|

@@ -1,3 +1,4 @@
+# Die Raum Tabelle
 class CreateRooms < ActiveRecord::Migration
   def change
     create_table :rooms do |t|

@@ -1,3 +1,4 @@
+# Von Rolify generierte Rollen Tabelle und Zwischentabelle User_Rollen
 class RolifyCreateRoles < ActiveRecord::Migration
   def change
     create_table(:roles) do |t|

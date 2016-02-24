@@ -1,3 +1,4 @@
+# Die Tabelle fuer den Urlaubkallender
 class CreateVacationplans < ActiveRecord::Migration
   def change
     create_table :vacationplans do |t|

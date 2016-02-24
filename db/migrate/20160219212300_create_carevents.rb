@@ -1,3 +1,4 @@
+# Der Autokalender
 class CreateCarevents < ActiveRecord::Migration
   def change
     create_table :carevents do |t|
