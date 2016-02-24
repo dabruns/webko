@@ -2,6 +2,7 @@
 class CareventsController < ApplicationController
   before_action :set_carevent, only: [:show, :edit, :update, :destroy]
   before_action :check_auth, only: [:edit, :update, :destroy]
+  load_and_authorize_resource
 
   public
 

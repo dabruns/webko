@@ -2,6 +2,7 @@
 class RoomplansController < ApplicationController
   before_action :set_roomplan, only: [:show, :edit, :update, :destroy]
   before_action :check_auth, only: [:edit, :update, :destroy]
+  load_and_authorize_resource
 
   # GET /roomplans
   # GET /roomplans.json
