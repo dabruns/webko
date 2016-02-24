@@ -1,7 +1,7 @@
 # Der Controller wird fuer die Nachrichten auf
 # dem Schwarzen Brett benoetigt
 class MessagesController < ApplicationController
-  load_and_authorize_resource
+
   def index
     # messages =Message.page(params[:page]).per(6)
     @messages = Message.order('created_at DESC').page(params[:page]).per(5)
