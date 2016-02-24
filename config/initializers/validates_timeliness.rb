@@ -1,8 +1,8 @@
 ValidatesTimeliness.setup do |config|
   # Extend ORM/ODMs for full support (:active_record included).
-  config.extend_orms = [ :active_record ]
+  config.extend_orms = [:active_record]
   #
- # Default timezone
+  # Default timezone
   config.default_timezone = :utc
   #
   # Set the dummy date part for a time type values.
@@ -18,19 +18,18 @@ ValidatesTimeliness.setup do |config|
   # config.enable_multiparameter_extension!
   #
   # Shorthand date and time symbols for restrictions
-config.restriction_shorthand_symbols.update(
-      :now   => lambda { Time.current },
-     :today => lambda { Date.current }
- )
+  config.restriction_shorthand_symbols.update(
+    now: -> { Time.current },
+    today: -> { Date.current }
+  )
   #
   # Use the plugin date/time parser which is stricter and extendable
-config.use_plugin_parser = true
+  config.use_plugin_parser = true
   #
   # Add one or more formats making them valid. e.g. add_formats(:date, 'd(st|rd|th) of mmm, yyyy')
   #
-  #config.parser.add_formats(:datetime, 'dd-mm-yyyy' )
+  # config.parser.add_formats(:datetime, 'dd-mm-yyyy' )
   #
-
 
   # Remove one or more formats making them invalid. e.g. remove_formats(:date, 'dd/mm/yyy')
   # config.parser.remove_formats()
@@ -40,5 +39,4 @@ config.use_plugin_parser = true
   #
   # Treat ambiguous dates, such as 01/02/1950, as a Non-US date.
   config.parser.remove_us_formats
-
 end

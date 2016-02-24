@@ -2,8 +2,8 @@ class CareventsController < ApplicationController
   before_action :set_carevent, only: [:show, :edit, :update, :destroy]
   before_action :check_auth, only: [:edit, :update, :destroy]
 
-
   public
+
   # GET /carevents
   # GET /carevents.json
   def index
@@ -11,12 +11,11 @@ class CareventsController < ApplicationController
     @cars = Car.all
   end
 
-
   def check_auth
-      if current_user.id != @carevent.user_id
-        flash[:notice] = 'Sie können Einträge anderer Nutzer nicht ändern / löschen'
-        redirect_to carevent_path
-      end
+    if current_user.id != @carevent.user_id
+      flash[:notice] = 'Sie können Einträge anderer Nutzer nicht ändern / löschen'
+      redirect_to carevent_path
+    end
   end
 
   # GET /carevents/1
@@ -38,7 +37,6 @@ class CareventsController < ApplicationController
   def create
     @carevent = Carevent.new(carevent_params)
     @carevent.user_id = current_user.id
-
 
     respond_to do |format|
       if @carevent.save
@@ -76,15 +74,14 @@ class CareventsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_carevent
-      @carevent = Carevent.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def carevent_params
-      params.require(:carevent).permit(:title, :description, :start_time, :end_time, :car_id)
-    end
-
+  # Use callbacks to share common setup or constraints between actions.
+  def set_carevent
+    @carevent = Carevent.find(params[:id])
   end
 
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def carevent_params
+    params.require(:carevent).permit(:title, :description, :start_time, :end_time, :car_id)
+  end
+  end

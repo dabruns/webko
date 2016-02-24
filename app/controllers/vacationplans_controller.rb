@@ -8,7 +8,6 @@ class VacationplansController < ApplicationController
     @vacationplans = Vacationplan.all
   end
 
-
   def check_auth
     if current_user.id != @vacationplan.user_id
       flash[:notice] = 'Sie können Einträge anderer Nutzer nicht ändern / löschen'
@@ -72,13 +71,14 @@ class VacationplansController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_vacationplan
-      @vacationplan = Vacationplan.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def vacationplan_params
-      params.require(:vacationplan).permit(:user_id, :start_time, :end_time)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_vacationplan
+    @vacationplan = Vacationplan.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def vacationplan_params
+    params.require(:vacationplan).permit(:user_id, :start_time, :end_time)
+  end
 end

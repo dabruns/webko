@@ -9,7 +9,6 @@ class RoomplansController < ApplicationController
     @rooms = Room.all
   end
 
-
   def check_auth
     if current_user.id != @roomplan.user_id
       flash[:notice] = 'Sie können Einträge anderer Nutzer nicht ändern / löschen'
@@ -73,13 +72,14 @@ class RoomplansController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_roomplan
-      @roomplan = Roomplan.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def roomplan_params
-      params.require(:roomplan).permit(:room_id, :usage, :start_time, :end_time)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_roomplan
+    @roomplan = Roomplan.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def roomplan_params
+    params.require(:roomplan).permit(:room_id, :usage, :start_time, :end_time)
+  end
 end

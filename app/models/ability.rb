@@ -7,21 +7,16 @@ class Ability
     #   user ||= User.new # guest user (not logged in)
     if user.present?
       if user.has_role?(:admin)
-        #Admins
+        # Admins
         can :manage, :all
       else
-        #Registered users
+        # Registered users
         can :read, :all
       end
     else
-      #nicht regestrierte nutzer
+      # nicht regestrierte nutzer
       can :read, WelcomeController
     end
-
-
-
-
-
 
     #   user ||= User.new # guest user (not logged in)
     #   if user.admin?

@@ -13,10 +13,10 @@ Rails.application.routes.draw do
   resources :carevents
   devise_for :users
 
-  resources :users, only:[:index, :show, :edit, :update]
-  #root 'welcome#index'
+  resources :users, only: [:index, :show, :edit, :update]
+  # root 'welcome#index'
 
-  #get 'index' => 'welcome#index'
+  # get 'index' => 'welcome#index'
   get 'carevents/:id' => 'carevents#index'
   get 'roomplans/:id' => 'roomplans#index'
   get 'vacationplans/:id' => 'vacationplans#index'
@@ -26,7 +26,7 @@ Rails.application.routes.draw do
   end
   root 'messages#index'
   get 'welcome/index'
-  #root 'welcome#index'
+  # root 'welcome#index'
 
   # The priority is based upon order
   # of creation: first created -> highest priority.

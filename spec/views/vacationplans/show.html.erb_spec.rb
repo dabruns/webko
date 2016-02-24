@@ -1,13 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe "vacationplans/show", type: :view do
+RSpec.describe 'vacationplans/show', type: :view do
   before(:each) do
     @vacationplan = assign(:vacationplan, Vacationplan.create!(
-      :user => nil
+                                            user: nil
     ))
   end
 
-  it "renders attributes in <p>" do
+  it 'renders attributes in <p>' do
     render
     expect(rendered).to match(//)
   end

@@ -6,7 +6,6 @@ class CreateMessages < ActiveRecord::Migration
       t.date :date
       t.boolean :important
       t.timestamps null: false
-
     end
   end
 end

@@ -1,8 +1,8 @@
 class MessagesController < ApplicationController
   def index
-    #messages =Message.page(params[:page]).per(6)
-    @messages=Message.order('created_at DESC').page(params[:page]).per(5)
-    #@messages=Message.all
+    # messages =Message.page(params[:page]).per(6)
+    @messages = Message.order('created_at DESC').page(params[:page]).per(5)
+    # @messages=Message.all
   end
 
   def new
@@ -10,11 +10,11 @@ class MessagesController < ApplicationController
   end
 
   def show
-    @message=Message.find(params[:id])
+    @message = Message.find(params[:id])
 
     respond_to do |format|
-      format.html #show.html.erb
-      format.json {render :json =>@messages}
+      format.html # show.html.erb
+      format.json { render json: @messages }
     end
   end
 
@@ -23,7 +23,7 @@ class MessagesController < ApplicationController
     if @messages.save
       redirect_to root_path
     else
-      render "new"
+      render 'new'
     end
   end
 end
