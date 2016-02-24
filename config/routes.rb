@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show, :edit, :update]
   # root 'welcome#index'
 
-  # get 'index' => 'welcome#index'
+  get 'index' => 'welcome#index'
   get 'carevents/:id' => 'carevents#index'
   get 'roomplans/:id' => 'roomplans#index'
   get 'vacationplans/:id' => 'vacationplans#index'

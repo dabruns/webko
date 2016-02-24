@@ -19,30 +19,25 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand"<%= link_to 'Startseite' , messages_index_path %></a>
+      <a class="navbar-brand"<%= link_to 'Startseite' , index_path %></a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li>
-          <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Kalender
-              <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-              <li><%= link_to 'Kfz-Nutzung', carevents_path %></li>
-              <li><%= link_to 'Urlaubsplan', vacationplans_path %></li>
-              <li><%= link_to 'Raumbelegung', roomplans_path %></li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <a href="#">Benutzer anlegen</a>
-        </li>
-        <li>
-          <a href="#">Neuigkeiten erstellen</a>
-        </li>
-        <li>
           <%if user_signed_in? %>
+            <li>
+              <%= link_to 'Schwarzes Brett', messages_index_path %>
+            </li>
+            <li>
+              <%= link_to 'Kfz-Nutzung', carevents_path %>
+            </li>
+            <li>
+              <%= link_to 'Urlaubsplan', vacationplans_path %>
+            </li>
+            <li>
+              <%= link_to 'Raumbelegung', roomplans_path %>
+            </li>
+            <li>
             <li>
               <a href ="">Eingeloggt als:  <strong><%= current_user.email %></strong></a>
             </li>
@@ -50,7 +45,9 @@
             <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
             </li>
           <% else %>
+            <li>
             <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
+            </li>
             <%end %>
         </li>
       </ul>
