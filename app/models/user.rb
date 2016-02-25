@@ -2,9 +2,9 @@
 class User < ActiveRecord::Base
   rolify
   # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+  # :confirmable, :lockable, :timeoutable and :omniauthable :recoverable,
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :rememberable, :trackable, :validatable
 
   # Virtual attribute for authenticating by either username or email
   # This is in addition to a real persisted field like 'username'
@@ -20,6 +20,8 @@ class User < ActiveRecord::Base
   end
 
   validates :username, presence: true, length: { maximum: 255 }, uniqueness: { case_sensitive: false }, format: { with: /\A[a-zA-Z0-9]*\z/, message: 'may only contain letters and numbers.' }
+  validates :first_name, presence: true
+  validates :last_name, presence: true
 
   has_many :carevents
   has_many :roomplans
