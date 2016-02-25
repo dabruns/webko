@@ -11,6 +11,6 @@ de:
       on_or_after: "muss bei oder nach %{restriction} sein"
   validates_timeliness:
     error_value_formats:
-      date: '%d.%m.%y'
+      date: '%d.%m.%Y'
       time: '%H:%M'
       datetime: '%d.%m.%Y %H:%M'
