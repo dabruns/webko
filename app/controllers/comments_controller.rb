@@ -11,4 +11,9 @@ class CommentsController < ApplicationController
 
   def destroy
   end
+
+  def comment_params
+    params.require(:comment).permit(:message_id, :text, :user, :message)
+  end
+
 end

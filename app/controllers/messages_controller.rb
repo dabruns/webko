@@ -29,4 +29,9 @@ class MessagesController < ApplicationController
       render 'new'
     end
   end
+
+  def message_params
+    params.require(:message).permit(:title, :description, :date, :important)
+  end
+
 end
