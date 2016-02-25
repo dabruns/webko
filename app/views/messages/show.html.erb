@@ -14,14 +14,14 @@
 </p>
 </div>
 <br>
-<%= link_to "Zurück zur Startseite", messages_index_path%>
+<div id="button1"><%= link_to "Zurück zur Startseite", messages_index_path%></div>
 
 <h2>Kommentare</h2>
 
 <% @message.comments.each do |comment| %>
 <div class="comment">
   <p id="user"> <%= current_user.email %> schreibt:</p><p>
-<%= comment.text%>
+  <%= comment.text%> - vom <%= comment.created_at.strftime('%d.%m.%y um %H:%M Uhr') %>
   </p>
 </div>
 <%end%>
@@ -29,6 +29,7 @@
 
 <%= form_for [@message, @message.comments.build] do |f| %>
   <p><%= f.text_area :text, :size => '10x10' %></p>
+    <br>
   <p><%= f.submit "Kommentar senden"%></p>
 <%end%>
 

@@ -5,18 +5,25 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-hr{
-  color: black;
-  height: 5px;
-}
-
 .message{
     background: #f5f5f5;
-    border: 1px solid #FFF;
+    border: 1px solid #bbbbbb;
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     box-shadow: 1px 2px 4px rgba(0,0,0,.4);
+}
+
+#title{
+  transition: all .2s ease-in-out;
+}
+
+#title:hover{
+  transform: scale(1.1);
+}
+
+#important_tag{
+  color: red;
 }
 
 .comment{
@@ -40,7 +47,6 @@ hr{
 
 #links{
   float: left;
-  border: 5px solid;
   height: auto;
   white-space : nowrap;
   overflow: auto;
@@ -57,14 +63,44 @@ hr{
   vertical-align: middle;
 }
 
-#button{
+#button {
+  text-align: center;
+  background: lightgrey;
+  color: #fff;
+  font-family: Sans-serif;
+  border: 1px solid #bbbbbb;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 1px 2px 4px rgba(0,0,0,.4);
+  font-size: 20px;
+  height: 60px;
+  width: 150px;
+  line-height: 60px;
+  margin: 25px 25px;
+  text-align: center;
+  border: 0;
+  transition: all 0.3s ease 0s;
+}
+
+#button:hover {
+  background: white;
+}
+
+#button1{
   background-color: lightgrey;
   border: solid;
+  border-color: white;
   border-radius: 5px;
-  color: white;
   padding: 10px 16px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  transition: all 0.3s ease 0s;
+}
+
+#button1:hover {
+  background: white;
+  border-color:lightgrey;
 }

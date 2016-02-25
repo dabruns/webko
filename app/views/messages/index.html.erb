@@ -10,9 +10,9 @@
 
     <% @messages.each do |message| %>
         <div class="message">
-          <h4><%= link_to message.title, message%>
+          <h4 id="title"><%= link_to message.title, message%>
           <% if message.important %>
-             <font color="red">- Wichtig!</font>
+             <div id="important_tag">- Wichtig!</div>
           <% end %>
             <p>Verfasst am: <%= message.created_at.strftime('%d.%m.%y') %></p></h4>
           <p><%= message.description.truncate_words(40)  %>
@@ -24,7 +24,7 @@
         </div>
     <hr>
     <% end %>
-    <div id="button"><p><%= link_to "Neue Nachricht anlegen", new_message_path%></p></div>
+    <div id="button1"><p><%= link_to "Neue Nachricht anlegen", new_message_path%></p></div>
     <p><%= paginate @messages %></p>
   </div>
 </div>
