@@ -16,3 +16,20 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+.notice
+{
+  text-align: center;
+  color: #00529B;
+  font-size:14pt;
+}
+
+.alert {
+  color: #9F6000;
+  font-size:14pt;
+}
+

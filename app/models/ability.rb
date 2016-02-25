@@ -5,21 +5,27 @@ class Ability
 
   def initialize(user)
     # Define abilities for the passed in user here. For example:
-    #
-    #   user ||= User.new # guest user (not logged in)
     if user.present?
       if user.has_role?(:admin)
         # Admins
         can :manage, :all
       else
-        # Registered users
+        #keine Admins
+
+        # Wenn sich jemand Fragt warum ein else braucht
+        # Das haengt damit zusammen das die Funktionen wo der benutzer
+        # nur eingeschrenkte rechte hab konnten aus Zeitgründen
+        # im SEII Projekt nicht umgesetzt werden
+        # Später werde die Funktionen noch eingeschraenkt
         can :read, :all
+        can :create, :all
+        can :update, :all
+        can :delete, :all
       end
     else
       # nicht regestrierte nutzer
       can :read, WelcomeController
     end
-    #
     # The first argument to `can` is the action you are giving the user
     # permission to do.
     # If you pass :manage it will apply to every action. Other common actions
