@@ -24,7 +24,7 @@ class MessagesController < ApplicationController
   def create
     @messages = Message.new(params.require(:message).permit(:title, :description, :date, :important))
     if @messages.save
-      redirect_to root_path
+      redirect_to messages_index_path
     else
       render 'new'
     end
