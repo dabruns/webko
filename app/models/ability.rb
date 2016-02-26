@@ -14,9 +14,9 @@ class Ability
 
         # Wenn sich jemand Fragt warum ein else braucht
         # Das haengt damit zusammen das die Funktionen wo der benutzer
-        # nur eingeschrenkte rechte hab konnten aus Zeitgründen
+        # nur eingeschrenkte rechte hab konnten aus Zeitgruenden
         # im SEII Projekt nicht umgesetzt werden
-        # Später werde die Funktionen noch eingeschraenkt
+        # Spaeter werde die Funktionen noch eingeschraenkt
         can :read, :all
         can :create, :all
         can :update, :all

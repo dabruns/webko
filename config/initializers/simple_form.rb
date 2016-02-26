@@ -114,10 +114,14 @@ SimpleForm.setup do |config|
   # Whether attributes are required by default (or not). Default is true.
   # config.required_by_default = true
 
-  # Tell browsers whether to use the native HTML5 validations (novalidate form option).
-  # These validations are enabled in SimpleForm's internal config but disabled by default
-  # in this configuration, which is recommended due to some quirks from different browsers.
-  # To stop SimpleForm from generating the novalidate option, enabling the HTML5 validations,
+  # Tell browsers whether to use the native
+  # HTML5 validations (novalidate form option).
+  # These validations are enabled in SimpleForm's
+  # internal config but disabled by default
+  # in this configuration, which is recommended due
+  # to some quirks from different browsers.
+  # To stop SimpleForm from generating the novalidate option,
+  # enabling the HTML5 validations,
   # change this configuration to true.
   config.browser_validations = false
 
@@ -130,7 +134,8 @@ SimpleForm.setup do |config|
   # config.input_mappings = { /count/ => :integer }
 
   # Custom wrappers for input types. This should be a hash containing an input
-  # type as key and the wrapper that will be used for all inputs with specified type.
+  # type as key and the wrapper that will be used
+  # for all inputs with specified type.
   # config.wrapper_mappings = { string: :prepend }
 
   # Namespaces where SimpleForm should look for custom input classes that
