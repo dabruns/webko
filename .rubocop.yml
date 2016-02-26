@@ -1,5 +1,4 @@
 AllCops:
   Excludes:
-    - config/unicorn.rb
     - db/**
   Enabled: true
