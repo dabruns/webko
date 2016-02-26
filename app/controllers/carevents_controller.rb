@@ -69,8 +69,9 @@ class CareventsController < ApplicationController
   # DELETE /carevents/1.json
   def destroy
     @carevent.destroy
+    notiz = String.new('Eintrag wurde erfolgreich gelöscht.')
     respond_to do |format|
-      format.html { redirect_to carevents_url, notice: 'Eintrag wurde erfolgreich gelöscht.' }
+      format.html { redirect_to carevents_url, notice: notiz }
       format.json { head :no_content }
     end
   end
