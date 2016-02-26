@@ -4,7 +4,8 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  # Devise will use the `secret_key_base` on Rails 4+ applications as its `secret_key`
+  # Devise will use the `secret_key_base` on
+  # Rails 4+ applications as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = 'af8305140fc03d3b9f4c16250ac3d02c012acf84061eb5f570dcd62837ecd9d824087b8016b221b20bb4899b4bdc83069e75f17915d4b0c238fe2c0bac18fcb9'
 
@@ -12,7 +13,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  # config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  # config.mailer_sender = 'ChangeMe-at-config-initializers-devise@example.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -28,16 +29,22 @@ Devise.setup do |config|
   # just :email. You can configure it to use [:username, :subdomain], so for
   # authenticating a user, both parameters are required. Remember that those
   # parameters are used only when authenticating and not when retrieving from
-  # session. If you need permissions, you should implement that in a before filter.
+  # session. If you need permissions, you should implement that in a
+  # before filter.
   # You can also supply a hash where the value is a boolean determining whether
   # or not authentication should be aborted when the value is not present.
   config.authentication_keys = [:login]
 
-  # Configure parameters from the request object used for authentication. Each entry
-  # given should be a request method and it will automatically be passed to the
-  # find_for_authentication method and considered in your model lookup. For instance,
-  # if you set :request_keys to [:subdomain], :subdomain will be used on authentication.
-  # The same considerations mentioned for authentication_keys also apply to request_keys.
+  # Configure parameters from the request object used for
+  # authentication. Each entry
+  # given should be a request method and it will automatically
+  # be passed to the
+  # find_for_authentication method and considered in your model
+  # lookup. For instance,
+  # if you set :request_keys to [:subdomain], :subdomain will
+  # be used on authentication.
+  # The same considerations mentioned for authentication_keys
+  # also apply to request_keys.
   # config.request_keys = []
 
   # Configure which authentication keys should be case-insensitive.
@@ -47,20 +54,24 @@ Devise.setup do |config|
 
   # Configure which authentication keys should have whitespace stripped.
   # These keys will have whitespace before and after removed upon creating or
-  # modifying a user and when used to authenticate or find a user. Default is :email.
+  # modifying a user and when used to authenticate or find
+  # a user. Default is :email.
   config.strip_whitespace_keys = [:email, :username]
 
   # Tell if authentication through request.params is enabled. True by default.
   # It can be set to an array that will enable params authentication only for the
-  # given strategies, for example, `config.params_authenticatable = [:database]` will
+  # given strategies, for example, `config.params_authenticatable = [:database]`
+  # will
   # enable it only for database (email + password) authentication.
   # config.params_authenticatable = true
 
   # Tell if authentication through HTTP Auth is enabled. False by default.
   # It can be set to an array that will enable http authentication only for the
-  # given strategies, for example, `config.http_authenticatable = [:database]` will
+  # given strategies, for example, `config.http_authenticatable = [:database]`
+  # will
   # enable it only for database authentication. The supported strategies are:
-  # :database      = Support basic authentication with authentication key + password
+  # :database      = Support basic authentication with authentication
+  # key + password
   # config.http_authenticatable = false
 
   # If 401 status code should be returned for AJAX requests. True by default.
@@ -89,17 +100,24 @@ Devise.setup do |config|
 
   # ==> Configuration for :database_authenticatable
   # For bcrypt, this is the cost for hashing the password and defaults to 10. If
-  # using other encryptors, it sets how many times you want the password re-encrypted.
+  # using other encryptors, it sets how many times you
+  # want the password re-encrypted.
   #
-  # Limiting the stretches to just one in testing will increase the performance of
-  # your test suite dramatically. However, it is STRONGLY RECOMMENDED to not use
-  # a value less than 10 in other environments. Note that, for bcrypt (the default
-  # encryptor), the cost increases exponentially with the number of stretches (e.g.
-  # a value of 20 is already extremely slow: approx. 60 seconds for 1 calculation).
+  # Limiting the stretches to just one in testing
+  # will increase the performance of
+  # your test suite dramatically. However, it
+  # is STRONGLY RECOMMENDED to not use
+  # a value less than 10 in other environments.
+  # Note that, for bcrypt (the default
+  # encryptor), the cost increases exponentially
+  # with the number of stretches (e.g.
+  # a value of 20 is already extremely slow: approx.
+  # 60 seconds for 1 calculation).
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = '4294a9c76f12d605cbf480caeaad1803943b0a90646c37b2c52a13d0c6a4ee0f532359263abd19612929160335bb8f9d08ca8aacdd968beab95d12cacc35353e'
+  # config.pepper = '4294a9c76f12d605cbf480caeaad1803943b0a90646c37b2c52a13d0c6
+  # a4ee0f532359263abd19612929160335bb8f9d08ca8aacdd968beab95d12cacc35353e'
 
   # Send a notification email when the user's password is changed
   # config.send_password_change_notification = false
