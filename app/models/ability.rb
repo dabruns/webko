@@ -10,7 +10,7 @@ class Ability
         # Admins
         can :manage, :all
       else
-        #keine Admins
+        # keine Admins
 
         # Wenn sich jemand Fragt warum ein else braucht
         # Das haengt damit zusammen das die Funktionen wo der benutzer
