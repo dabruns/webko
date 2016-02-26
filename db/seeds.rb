@@ -8,9 +8,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Car.create(name: 'Opel Vivaro')
-Car.create(name: 'Opel Combo')
-Car.create(name: 'Opel Astra')
+Car.create(name: 'Fiat Doplo ST-????')
+Car.create(name: 'Fiat Doblo XL ST-????')
+Car.create(name: 'Ford Transit ST-????')
+Car.create(name: 'Opel Vivaro ST-????')
+Car.create(name: 'Opel Vivaro ST-????')
 
 Room.create(name: 'Besprächungsraum Sanihaus')
 Room.create(name: 'Besprächungsraum Gellendorf')
