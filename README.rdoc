@@ -1,3 +1,3 @@
 == README
 Dies ist eine automatisch generierte Dokumentation.
-
+Sie können sich auf der linken Seite durch die Struktur unserer Webseite klicken.

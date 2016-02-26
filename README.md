@@ -1,21 +1,30 @@
-== README
+<h1>Readme</h1>
 
-Dieses Readme beinhaltet Erläuterungen zu folgenden Punkten:
+Dieses Readme beinhaltet Erläuterungen zu folgenden Punkten:<br>
 
-Aufgabenstellung / die Anforderungen des Stakeholders
-Planung und Dokumentation der User Stories</li>
+<ul>
+<li>Aufgabenstellung / die Anforderungen des Stakeholders</li>
+<li>Planung und Dokumentation der User Stories</li>
 <li>Dokumentation zum Projekt 'Webko'</li>
 <li>Systemvoraussetzungen / Installationshinweise</li>
 <li>Heroku Deployment</li>
 </ul>
+<br>
+<h2>Aufgabenstellung / die Anforderungen des Stakeholders</h2>
+<p></p>
 
-<h1>Aufgabenstellung / die Anforderungen des Stakeholders</h1>
+<h2>Planung und Dokumentation der User Stories</h2>
+<p>Wir haben uns bei der Planung und Dokumentation der User Stories für Taiga.io entschieden, weil wir das Tool
+    einfach nach unserem Bedarf anpassen konnten. Zudem sind für die Nutzung keine Kosten angefallen.<br>
+    In unserem Taiga Projekt wurde fast ausschließlich die Kanban Funktionalität genutzt - dies ist unter folgendem Link zu finden:<br>
+    <a href="https://tree.taiga.io/project/derschleicher-we-ii/kanban">https://tree.taiga.io/project/derschleicher-we-ii/kanban</a>
 
-<h1>Planung und Dokumentation der User Stories</h1>
+</p>
 
-<h1>Dokumentation zum Projekt 'Webko'</h1>
+<h2>Dokumentation zum Projekt 'Webko'</h2>
 <p>Die automatisch erstellte Dokumentation (rake doc:app) zu unserem Projekt ist unter folgendem Link zu finden:<br>
-    <a href="http://doc.dbwebspace.de">Dokumentation</a><br>
+    <a href="http://doc.dbwebspace.de">Dokumentation (Online)</a><br>
+    <a href="doc/app/README_rdoc.html">Dokumentation (Offline)</a><br>
     Aktueller Stand:<br>
     Files:      36<br>
     <br>
@@ -29,8 +38,7 @@ Planung und Dokumentation der User Stories</li>
     78.26% documented<br>
 </p>
 
-
-<h1>Systemvoraussetzungen / Installationshinweise</h1>
+<h2>Systemvoraussetzungen / Installationshinweise</h2>
 * Ruby version
 ruby 2.2.4p230
 
@@ -50,6 +58,9 @@ ruby 2.2.4p230
 
 * ...
 
-<h1>Heroku Deployment</h1>
+<h2>Heroku Deployment</h2>
+<p>Den aktuellesten Master Branch des Projektes haben wir auf Heroku deployt.<br>
+Die URL lautet <a href="https://webko.herokuapp.com/"> https://webko.herokuapp.com/</a>
+</p>
 
 
