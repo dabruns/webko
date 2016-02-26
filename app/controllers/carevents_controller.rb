@@ -14,8 +14,9 @@ class CareventsController < ApplicationController
   end
 
   def check_auth
+    notice_check_auth = String.new('Sie können Einträge anderer Nutzer nicht ändern / löschen')
     if current_user.id != @carevent.user_id
-      flash[:notice] = 'Sie können Einträge anderer Nutzer nicht ändern / löschen'
+      flash[:notice] = notice_check_auth
       redirect_to carevent_path
     end
   end
@@ -37,12 +38,13 @@ class CareventsController < ApplicationController
   # POST /carevents
   # POST /carevents.json
   def create
+    notice_create = String.new('Eintrag wurde erfolgreich erstellt.')
     @carevent = Carevent.new(carevent_params)
     @carevent.user_id = current_user.id
 
     respond_to do |format|
       if @carevent.save
-        format.html { redirect_to @carevent, notice: 'Eintrag wurde erfolgreich erstellt.' }
+        format.html { redirect_to @carevent, notice: notice_create }
         format.json { render :show, status: :created, location: @carevent }
       else
         format.html { render :new }
@@ -54,9 +56,10 @@ class CareventsController < ApplicationController
   # PATCH/PUT /carevents/1
   # PATCH/PUT /carevents/1.json
   def update
+    notice_update = String.new('Eintrag wurde erfolgreich aktualisiert.')
     respond_to do |format|
       if @carevent.update(carevent_params)
-        format.html { redirect_to @carevent, notice: 'Eintrag wurde erfolgreich aktualisiert.' }
+        format.html { redirect_to @carevent, notice: notice_update }
         format.json { render :show, status: :ok, location: @carevent }
       else
         format.html { render :edit }
@@ -68,10 +71,11 @@ class CareventsController < ApplicationController
   # DELETE /carevents/1
   # DELETE /carevents/1.json
   def destroy
+    notice_destroy = String.new('Eintrag wurde erfolgreich gelöscht.')
     @carevent.destroy
-    notiz = String.new('Eintrag wurde erfolgreich gelöscht.')
+
     respond_to do |format|
-      format.html { redirect_to carevents_url, notice: notiz }
+      format.html { redirect_to carevents_url, notice: notice_destroy }
       format.json { head :no_content }
     end
   end

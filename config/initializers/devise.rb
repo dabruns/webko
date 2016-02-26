@@ -7,7 +7,8 @@ Devise.setup do |config|
   # Devise will use the `secret_key_base` on
   # Rails 4+ applications as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'af8305140fc03d3b9f4c16250ac3d02c012acf84061eb5f570dcd62837ecd9d824087b8016b221b20bb4899b4bdc83069e75f17915d4b0c238fe2c0bac18fcb9'
+  # config.secret_key = 'af8305140fc03d3b9f4c16250ac3d02c012acf84061eb5f570dcd6
+  # 2837ecd9d824087b8016b221b20bb4899b4bdc83069e75f17915d4b0c238fe2c0bac18fcb9'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -59,7 +60,8 @@ Devise.setup do |config|
   config.strip_whitespace_keys = [:email, :username]
 
   # Tell if authentication through request.params is enabled. True by default.
-  # It can be set to an array that will enable params authentication only for the
+  # It can be set to an array that will enable params
+  # authentication only for the
   # given strategies, for example, `config.params_authenticatable = [:database]`
   # will
   # enable it only for database (email + password) authentication.
