@@ -19,6 +19,7 @@ require 'rails_helper'
 # that an instance is receiving a specific message.
 
 RSpec.describe CareventsController, type: :controller do
+  login_admin
   # This should return the minimal set of attributes required to create a valid
   # Carevent. As you add validations to Carevent, be sure to
   # adjust the attributes here as well.

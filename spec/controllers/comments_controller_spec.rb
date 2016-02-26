@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe CommentsController, type: :controller do
+  login_admin
   describe 'GET #create' do
     it 'returns http success' do
       get :create
