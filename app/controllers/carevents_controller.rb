@@ -4,7 +4,7 @@ class CareventsController < ApplicationController
   before_action :check_auth, only: [:edit, :update, :destroy]
   load_and_authorize_resource
 
-  public
+  # public
 
   # GET /carevents
   # GET /carevents.json
@@ -85,6 +85,10 @@ class CareventsController < ApplicationController
   # Never trust parameters from the scary internet,
   # only allow the white list through.
   def carevent_params
-    params.require(:carevent).permit(:title, :description, :start_time, :end_time, :car_id)
+    params.require(:carevent).permit(:title,
+                                     :description,
+                                     :start_time,
+                                     :end_time,
+                                     :car_id)
   end
-  end
+end

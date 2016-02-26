@@ -21,7 +21,10 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @messages = Message.new(params.require(:message).permit(:title, :description, :date, :important))
+    @messages = Message.new(params.require(:message).permit(:title,
+                                                            :description,
+                                                            :date,
+                                                            :important))
     if @messages.save
       redirect_to messages_index_path
     else
