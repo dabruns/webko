@@ -21,8 +21,6 @@ Rails.application.routes.draw do
   get 'roomplans/:id' => 'roomplans#index'
   get 'vacationplans/:id' => 'vacationplans#index'
 
-  get 'doc' => 'doc/app#index'
-
   resources :messages do
     resources :comments
   end
