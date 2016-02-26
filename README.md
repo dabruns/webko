@@ -15,7 +15,7 @@ Planung und Dokumentation der User Stories</li>
 
 <h1>Dokumentation zum Projekt 'Webko'</h1>
 <p>Die automatisch erstellte Dokumentation (rake doc:app) zu unserem Projekt ist unter folgendem Link zu finden:<br>
-    <a href="doc/app/README_rdoc.html">Dokumentation</a><br>
+    <a href="http://doc.dbwebspace.de">Dokumentation</a><br>
     Aktueller Stand:<br>
     Files:      36<br>
     <br>
