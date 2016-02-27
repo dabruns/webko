@@ -32,7 +32,7 @@ einen Administrationsbereich, der die Verwaltung für Nutzer, Nutzergruppe, Auto
     einfach nach unserem Bedarf anpassen lässt. Zudem sind für die Nutzung keine Kosten angefallen.<br>
     In unserem Taiga Projekt wurde fast ausschließlich die Kanban Funktionalität genutzt - diese ist unter folgendem
     Link zu finden:<br>
-    <a href="https://tree.taiga.io/project/derschleicher-we-ii/kanban">
+    <a href="https://tree.taiga.io/project/derschleicher-we-ii/kanban" target="_blank">
         https://tree.taiga.io/project/derschleicher-we-ii/kanban</a><br>
     (Login über Github Account möglich - Einladung versandt)
 
@@ -41,14 +41,15 @@ einen Administrationsbereich, der die Verwaltung für Nutzer, Nutzergruppe, Auto
 <h2>Dokumentation zum Projekt 'Webko'</h2>
 <p>
 Die automatisch erstellte Dokumentation (rake doc:app) zu unserem Projekt ist unter folgendem Link zu finden:<br>
-    <a href="http://doc.dbwebspace.de">Dokumentation (Online)</a><br>
-    <a href="doc/app/README_rdoc.html">Dokumentation (Offline)</a><br>
+    <a href="http://doc.dbwebspace.de" target="_blank">Dokumentation (Online)</a><br>
+Die Rohdateien der Dokumentation beifnden sich im Unterordner /doc/
+    <br>
     Aktueller Stand:<br>
 <br>
     Files:      36<br>
 <br>
    Classes:    20 (0 undocumented)<br>
-   >Modules:     8 (0 undocumented)<br>
+   Modules:     8 (0 undocumented)<br>
 <br>
     Constants:   0 (0 undocumented)<br>
     Attributes:  1 (0 undocumented)<br>
@@ -56,8 +57,6 @@ Die automatisch erstellte Dokumentation (rake doc:app) zu unserem Projekt ist un
 <br>
     Total:      69 (2 undocumented)<br>
     97.10% documented<br>
-<br>
-    Elapsed: 0.5s
 
 </p>
 
@@ -76,12 +75,11 @@ Diese sind zwingend vor der Nutzung der webbasierten Kommunikationsfläche auszu
 
 <h3>Systemabhängigkeiten</h3>
 
-    Vor der Nutzung:<br>
-    <br>
+    Zur Installation aller benötigten Gems folgenden Befehl ausführen:<br>
     <code>bundle install</code><br>
    <br>
-    Genutzte Gems:<br>
-    <br>
+    <b>Genutzte Gems:</b><br>
+
     Using rake 10.5.0<br>
     Using i18n 0.7.0<br>
     Using json 1.8.3<br>
@@ -222,7 +220,7 @@ Zusammen mit dem Guard überprüft er das Projekt wie folgt:<br>
 <code>bundle exec guard</code><br>
 Damit der Guard korrekt arbeitet, muss Ruby mit "readline" installiert werden.<br>
 In den bereitgestellten virtuellen Maschinen ist dies der Fall.<br>
-<b>Ausführung der RSpec Test</b>
+<b>Ausführung der RSpec Test</b><br>
 Die hinterlegten RSpec Tests lassen sich mit<br>
 <code>rspec</code><br>
 ausführen.
@@ -230,6 +228,6 @@ ausführen.
 
 <h2>Heroku Deployment</h2>
 <p>Den aktuellesten Master Branch des Projektes 'Webko' haben wir auf Heroku deployt.<br>
-Die URL lautet <a href="https://webko.herokuapp.com/"> https://webko.herokuapp.com/</a>
+Die URL lautet <a href="https://webko.herokuapp.com/" target="_blank"> https://webko.herokuapp.com/</a>
 </p>
 
