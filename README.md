@@ -27,10 +27,11 @@ Dieses Readme beinhaltet Erläuterungen zu folgenden Punkten:<br>
     <a href="doc/app/README_rdoc.html">Dokumentation (Offline)</a><br>
     Aktueller Stand:<br>
 <code>
-    Files:      36<br>
-<br>
-    Classes:    20 (0 undocumented)<br>
-    Modules:     8 (0 undocumented)<br>
+    <p>Files:      36</p>
+
+   <p>Classes:    20 (0 undocumented)</p>
+    <p>Modules:     8 (0 undocumented)</p>
+
     Constants:   0 (0 undocumented)<br>
     Attributes:  1 (0 undocumented)<br>
     Methods:    40 (2 undocumented)<br>
