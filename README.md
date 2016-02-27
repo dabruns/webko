@@ -26,11 +26,12 @@ einen Administrationsbereich, der die Verwaltung für Nutzer, Nutzergruppe, Auto
 
 <h2>Planung und Dokumentation der User Stories</h2>
 <p>Wir haben uns bei der Planung und Dokumentation der User Stories für Taiga.io entschieden, weil sich das Tool
-    einfach nach den eigenen Bedarf anpassen lässt. Zudem sind für die Nutzung keine Kosten angefallen.<br>
+    einfach nach unserem Bedarf anpassen lässt. Zudem sind für die Nutzung keine Kosten angefallen.<br>
     In unserem Taiga Projekt wurde fast ausschließlich die Kanban Funktionalität genutzt - diese ist unter folgendem
     Link zu finden:<br>
     <a href="https://tree.taiga.io/project/derschleicher-we-ii/kanban">
-        https://tree.taiga.io/project/derschleicher-we-ii/kanban</a>
+        https://tree.taiga.io/project/derschleicher-we-ii/kanban</a><br>
+    (Login über Github Account möglich - Einladung versandt)
 
 </p>
 
@@ -57,15 +58,25 @@ einen Administrationsbereich, der die Verwaltung für Nutzer, Nutzergruppe, Auto
 </p>
 
 <h2>Systemvoraussetzungen / Installationshinweise</h2>
-<ul>
+Auszuführende Eingaben in der Shell sind wie folgt markiert:<br>
+<code>Eingabe</code><br>
+Diese sind zwingend vor der Nutzung der webbasierten Kommunikationsfläche auszuführen.<br>
 
-<li>Ruby version</li>
+
+<h3>Ruby Version</h3>
     ruby 2.2.4p230
+<h3>Rails Version</h3>
+    Rails 4.2.5.1
 
 
-<li>Systemabhängigkeiten</li>
+<h3>Systemabhängigkeiten</h3>
 
-<li>Konfiguration</li>
+    Vor der Nutzung:<br>
+    <br>
+    <code>bundle install</code><br>
+   <br>
+    Genutzte Gems:<br>
+    <br>
     Using rake 10.5.0<br>
     Using i18n 0.7.0<br>
     Using json 1.8.3<br>
@@ -88,7 +99,7 @@ einen Administrationsbereich, der die Verwaltung für Nutzer, Nutzergruppe, Auto
     Using ast 2.2.0<br>
     Using bcrypt 3.1.10<br>
     Using bcrypt-ruby 3.1.1.rc1<br>
-        Using debug_inspector 0.0.2<br>
+    Using debug_inspector 0.0.2<br>
     Using byebug 8.2.2<br>
     Using cancancan 1.13.1<br>
     Using coderay 1.1.0<br>
@@ -185,19 +196,22 @@ einen Administrationsbereich, der die Verwaltung für Nutzer, Nutzergruppe, Auto
     Using devise 3.5.6<br>
     Using simple_calendar 2.0.6<br>
     Using activeadmin 1.0.0.pre2 from git://github.com/activeadmin/activeadmin.git (at master@f7483e3)<br>
-    <li>Erstellung der Datenbank</li>
+<h3>Erstellung der Datenbank</h3>
 
-<li>Initialisierung der Datenbank</li>
+<h3>Initialisierung der Datenbank</h3>
 
-<li>Ausführung der RSpec Test</li>
+
+<h3>Ausführung der RSpec Test</h3>
+
+
 
 Services (job queues, cache servers, search engines, etc.)
 
-</ul>
+
 
 
 <h2>Heroku Deployment</h2>
-<p>Den aktuellesten Master Branch des Projektes haben wir auf Heroku deployt.<br>
+<p>Den aktuellesten Master Branch des Projektes 'Webko' haben wir auf Heroku deployt.<br>
 Die URL lautet <a href="https://webko.herokuapp.com/"> https://webko.herokuapp.com/</a>
 </p>
 
