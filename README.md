@@ -14,7 +14,8 @@ Dieses Readme beinhaltet Erläuterungen zu folgenden Punkten:<br>
 <br>
 
 <h2>Aufgabenstellung / Anforderungen des Stakeholders</h2>
-<p>Der Stakeholder ist unserem Fall die Multifit GmbH & Co.KG. Zur Verbesserung der Kommunikation innerhalb
+<p>
+    Der Stakeholder ist unserem Fall die Multifit GmbH & Co.KG. Zur Verbesserung der Kommunikation innerhalb
 des Betriebs wurden wir beauftragt, eine möglichst einfache Kommunikationsplattform zu erstellen. Die
 Hauptfunktion ist hierbei das schwarze Brett. Die Administration (der EDV) bzw. die Geschäftsführung hat die
     Möglichkeit wichtige Bekanntmachungen/Anliegen/Informationen zu verfassen. Die Mitarbeiter können diese bei Bedarf kommentieren.
@@ -23,7 +24,8 @@ für die Nutzung von Kraftfahrzeugen; in diesem können Mitarbeiter Zeiträume e
 Auto benötigen. Die gleiche Funktion hat der Kalender für die Raumplanung. Hier werden allerdings Räume für die
 Verwendung ausgewählt. Der dritte Kalender betrifft die Urlaubsplanung. Mitarbeiter haben können in diesem
 ihren genehmigten Urlaub eintragen. Abgerundet wird die webbasierte Kommunikationsoberfläche ('Webko') durch
-einen Administrationsbereich, der die Verwaltung für Nutzer, Nutzergruppe, Autos und Räume übernimmt.</p>
+einen Administrationsbereich, der die Verwaltung für Nutzer, Nutzergruppe, Autos und Räume übernimmt.
+</p>
 
 <h2>Planung und Dokumentation der User Stories</h2>
 <p>Wir haben uns bei der Planung und Dokumentation der User Stories für Taiga.io entschieden, weil sich das Tool
@@ -37,6 +39,7 @@ einen Administrationsbereich, der die Verwaltung für Nutzer, Nutzergruppe, Auto
 </p>
 
 <h2>Dokumentation zum Projekt 'Webko'</h2>
+<p>
 Die automatisch erstellte Dokumentation (rake doc:app) zu unserem Projekt ist unter folgendem Link zu finden:<br>
     <a href="http://doc.dbwebspace.de">Dokumentation (Online)</a><br>
     <a href="doc/app/README_rdoc.html">Dokumentation (Offline)</a><br>
@@ -59,7 +62,8 @@ Die automatisch erstellte Dokumentation (rake doc:app) zu unserem Projekt ist un
 </p>
 
 <h2>Systemvoraussetzungen / Installationshinweise</h2>
-Auszuführende Eingaben in der Shell sind wie folgt markiert:<br>
+<p>
+    Auszuführende Eingaben in der Shell sind wie folgt markiert:<br>
 <code>Eingabe</code><br>
 Diese sind zwingend vor der Nutzung der webbasierten Kommunikationsfläche auszuführen.<br>
 
@@ -197,16 +201,22 @@ Diese sind zwingend vor der Nutzung der webbasierten Kommunikationsfläche auszu
     Using devise 3.5.6<br>
     Using simple_calendar 2.0.6<br>
     Using activeadmin 1.0.0.pre2 from git://github.com/activeadmin/activeadmin.git (at master@f7483e3)<br>
+</p>
 <h3>Erstellung der Datenbank</h3>
+<p>
 Die Datenbank wird wie folgt erstellt:<br>
 <code>rake db:create</code>
+</p>
 
 <h3>Initialisierung der Datenbank</h3>
+<p>
 Um die Datenbank mit Tabellen und Inhalten zu füllen, werden folgende Befehle benötigt:<br>
-<code>rake db:migrate</code>
+<code>rake db:migrate</code><br>
 <code>rake db:seed</code>
+</p>
 
 <h3>Service: Rubocop / RSpec Guard  / Tests</h3>
+<p>
 Rubocop und der RSpec Guard wurde in dem Projekt eingerichtet.<br>
 Zusammen mit dem Guard überprüft er das Projekt wie folgt:<br>
 <code>bundle exec guard</code><br>
@@ -216,6 +226,7 @@ In den bereitgestellten virtuellen Maschinen ist dies der Fall.<br>
 Die hinterlegten RSpec Tests lassen sich mit<br>
 <code>rspec</code><br>
 ausführen.
+</p>
 
 <h2>Heroku Deployment</h2>
 <p>Den aktuellesten Master Branch des Projektes 'Webko' haben wir auf Heroku deployt.<br>
