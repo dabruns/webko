@@ -8,12 +8,14 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  # define permitted parameters
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:username, :first_name, :last_name, :email, :password, :password_confirmation, :remember_me) }
     devise_parameter_sanitizer.for(:sign_in) { |u| u.permit(:login, :username, :email, :password, :remember_me) }
     devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:username, :first_name, :last_name, :email, :password, :password_confirmation, :current_password) }
   end
 
+  # define false authentification of admin user
   def authenticate_admin_user!
     redirect_to new_user_session_path unless current_user && current_user.has_role?(:admin)
   end

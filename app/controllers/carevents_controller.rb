@@ -13,6 +13,7 @@ class CareventsController < ApplicationController
     @cars = Car.all
   end
 
+  # check authentification
   def check_auth
     notice_check_auth = String.new('Sie können Einträge anderer Nutzer nicht ändern / löschen')
     if current_user.id != @carevent.user_id
