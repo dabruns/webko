@@ -2,21 +2,35 @@
 
 Dieses Readme beinhaltet Erläuterungen zu folgenden Punkten:<br>
 
-<ul>
+<ol>
 <li>Aufgabenstellung / Anforderungen des Stakeholders</li>
 <li>Planung und Dokumentation der User Stories</li>
 <li>Dokumentation zum Projekt 'Webko'</li>
 <li>Systemvoraussetzungen / Installationshinweise</li>
 <li>Heroku Deployment</li>
-</ul>
+</ol>
+
 <br>
+
 <h2>Aufgabenstellung / Anforderungen des Stakeholders</h2>
+<p>Der Stakeholder ist unserem Fall die Multifit GmbH & Co.KG. Zur Verbesserung der Kommunikation innerhalb
+des Betriebs wurden wir beauftragt, eine möglichst einfache Kommunikationsplattform zu erstellen. Die
+Hauptfunktion ist hierbei das schwarze Brett. Die Administration (der EDV) bzw. die Geschäftsführung hat die
+    Möglichkeit wichtige Bekanntmachungen/Anliegen/Informationen zu verfassen. Die Mitarbeiter können diese bei Bedarf kommentieren.
+Zusätzlich wurden zur besseren Planung drei unabhängige Kalender erstellt. Dies ist zunächst ein Kalender
+für die Nutzung von Kraftfahrzeugen; in diesem können Mitarbeiter Zeiträume eintragen, wann sie ein bestimmtes
+Auto benötigen. Die gleiche Funktion hat der Kalender für die Raumplanung. Hier werden allerdings Räume für die
+Verwendung ausgewählt. Der dritte Kalender betrifft die Urlaubsplanung. Mitarbeiter haben können in diesem
+ihren genehmigten Urlaub eintragen. Abgerundet wird die webbasierte Kommunikationsoberfläche ('Webko') durch
+einen Administrationsbereich, der die Verwaltung für Nutzer, Nutzergruppe, Autos und Räume übernimmt.</p>
 
 <h2>Planung und Dokumentation der User Stories</h2>
 <p>Wir haben uns bei der Planung und Dokumentation der User Stories für Taiga.io entschieden, weil sich das Tool
     einfach nach den eigenen Bedarf anpassen lässt. Zudem sind für die Nutzung keine Kosten angefallen.<br>
-    In unserem Taiga Projekt wurde fast ausschließlich die Kanban Funktionalität genutzt - diese ist unter folgendem Link zu finden:<br>
-    <a href="https://tree.taiga.io/project/derschleicher-we-ii/kanban">https://tree.taiga.io/project/derschleicher-we-ii/kanban</a>
+    In unserem Taiga Projekt wurde fast ausschließlich die Kanban Funktionalität genutzt - diese ist unter folgendem
+    Link zu finden:<br>
+    <a href="https://tree.taiga.io/project/derschleicher-we-ii/kanban">
+        https://tree.taiga.io/project/derschleicher-we-ii/kanban</a>
 
 </p>
 
