@@ -126,13 +126,13 @@ benoetigt</p>
 
         <div class="method-description">
           
-          
+          <p>define params for require</p>
           
           
 
           
           <div class="method-source-code" id="comment_params-source">
-            <pre><span class="ruby-comment"># File app/controllers/comments_controller.rb, line 15</span>
+            <pre><span class="ruby-comment"># File app/controllers/comments_controller.rb, line 18</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">comment_params</span>
   <span class="ruby-identifier">params</span>.<span class="ruby-identifier">require</span>(<span class="ruby-value">:comment</span>).<span class="ruby-identifier">permit</span>(<span class="ruby-value">:message_id</span>, <span class="ruby-value">:text</span>, <span class="ruby-value">:user</span>, <span class="ruby-value">:message</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -159,13 +159,13 @@ benoetigt</p>
 
         <div class="method-description">
           
-          
+          <p>POST /messages</p>
           
           
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/comments_controller.rb, line 4</span>
+            <pre><span class="ruby-comment"># File app/controllers/comments_controller.rb, line 5</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
   <span class="ruby-ivar">@message</span> = <span class="ruby-constant">Message</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:message_id</span>])
   <span class="ruby-ivar">@comment</span> = <span class="ruby-ivar">@message</span>.<span class="ruby-identifier">comments</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:comment</span>].<span class="ruby-identifier">permit</span>(<span class="ruby-value">:message_id</span>, <span class="ruby-value">:text</span>, <span class="ruby-value">:user</span>, <span class="ruby-value">:message</span>))
@@ -196,13 +196,13 @@ benoetigt</p>
 
         <div class="method-description">
           
-          
+          <p>DELETE /messages/1</p>
           
           
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/comments_controller.rb, line 12</span>
+            <pre><span class="ruby-comment"># File app/controllers/comments_controller.rb, line 14</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
 <span class="ruby-keyword">end</span></pre>
           </div>

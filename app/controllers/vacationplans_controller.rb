@@ -10,6 +10,7 @@ class VacationplansController < ApplicationController
     @vacationplans = Vacationplan.all
   end
 
+  # check authentification
   def check_auth
     if current_user.id != @vacationplan.user_id
       flash[:notice] = 'Sie können Einträge anderer Nutzer nicht ändern / löschen'

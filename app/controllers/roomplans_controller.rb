@@ -11,6 +11,7 @@ class RoomplansController < ApplicationController
     @rooms = Room.all
   end
 
+  # check authentification
   def check_auth
     if current_user.id != @roomplan.user_id
       flash[:notice] = 'Sie können Einträge anderer Nutzer nicht ändern / löschen'

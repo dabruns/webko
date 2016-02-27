@@ -135,13 +135,13 @@
 
         <div class="method-description">
           
-          
+          <p>check authentification</p>
           
           
 
           
           <div class="method-source-code" id="check_auth-source">
-            <pre><span class="ruby-comment"># File app/controllers/roomplans_controller.rb, line 14</span>
+            <pre><span class="ruby-comment"># File app/controllers/roomplans_controller.rb, line 15</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">check_auth</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@roomplan</span>.<span class="ruby-identifier">user_id</span>
     <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">&#39;Sie können Einträge anderer Nutzer nicht ändern / löschen&#39;</span>
@@ -177,7 +177,7 @@
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/roomplans_controller.rb, line 37</span>
+            <pre><span class="ruby-comment"># File app/controllers/roomplans_controller.rb, line 38</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
   <span class="ruby-ivar">@roomplan</span> = <span class="ruby-constant">Roomplan</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">roomplan_params</span>)
   <span class="ruby-ivar">@roomplan</span>.<span class="ruby-identifier">user_id</span> = <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">id</span>
@@ -221,7 +221,7 @@
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/roomplans_controller.rb, line 68</span>
+            <pre><span class="ruby-comment"># File app/controllers/roomplans_controller.rb, line 69</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
   <span class="ruby-ivar">@roomplan</span>.<span class="ruby-identifier">destroy</span>
   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
@@ -258,7 +258,7 @@
 
           
           <div class="method-source-code" id="edit-source">
-            <pre><span class="ruby-comment"># File app/controllers/roomplans_controller.rb, line 32</span>
+            <pre><span class="ruby-comment"># File app/controllers/roomplans_controller.rb, line 33</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -324,7 +324,7 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/roomplans_controller.rb, line 27</span>
+            <pre><span class="ruby-comment"># File app/controllers/roomplans_controller.rb, line 28</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
   <span class="ruby-ivar">@roomplan</span> = <span class="ruby-constant">Roomplan</span>.<span class="ruby-identifier">new</span>
 <span class="ruby-keyword">end</span></pre>
@@ -357,7 +357,7 @@
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/roomplans_controller.rb, line 23</span>
+            <pre><span class="ruby-comment"># File app/controllers/roomplans_controller.rb, line 24</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -389,7 +389,7 @@
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/roomplans_controller.rb, line 54</span>
+            <pre><span class="ruby-comment"># File app/controllers/roomplans_controller.rb, line 55</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@roomplan</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">roomplan_params</span>)

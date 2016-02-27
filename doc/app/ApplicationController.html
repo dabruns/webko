@@ -124,13 +124,13 @@ Berechtigung Optionen</p>
 
         <div class="method-description">
           
-          
+          <p>define false authentification of admin user</p>
           
           
 
           
           <div class="method-source-code" id="authenticate_admin_user-21-source">
-            <pre><span class="ruby-comment"># File app/controllers/application_controller.rb, line 17</span>
+            <pre><span class="ruby-comment"># File app/controllers/application_controller.rb, line 19</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">authenticate_admin_user!</span>
   <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">new_user_session_path</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">current_user</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">has_role?</span>(<span class="ruby-value">:admin</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -157,13 +157,13 @@ Berechtigung Optionen</p>
 
         <div class="method-description">
           
-          
+          <p>define permitted parameters</p>
           
           
 
           
           <div class="method-source-code" id="configure_permitted_parameters-source">
-            <pre><span class="ruby-comment"># File app/controllers/application_controller.rb, line 11</span>
+            <pre><span class="ruby-comment"># File app/controllers/application_controller.rb, line 12</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">configure_permitted_parameters</span>
   <span class="ruby-identifier">devise_parameter_sanitizer</span>.<span class="ruby-identifier">for</span>(<span class="ruby-value">:sign_up</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">u</span><span class="ruby-operator">|</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">permit</span>(<span class="ruby-value">:username</span>, <span class="ruby-value">:first_name</span>, <span class="ruby-value">:last_name</span>, <span class="ruby-value">:email</span>, <span class="ruby-value">:password</span>, <span class="ruby-value">:password_confirmation</span>, <span class="ruby-value">:remember_me</span>) }
   <span class="ruby-identifier">devise_parameter_sanitizer</span>.<span class="ruby-identifier">for</span>(<span class="ruby-value">:sign_in</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">u</span><span class="ruby-operator">|</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">permit</span>(<span class="ruby-value">:login</span>, <span class="ruby-value">:username</span>, <span class="ruby-value">:email</span>, <span class="ruby-value">:password</span>, <span class="ruby-value">:remember_me</span>) }

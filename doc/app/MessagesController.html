@@ -129,13 +129,13 @@
 
         <div class="method-description">
           
-          
+          <p>POST /messages</p>
           
           
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/messages_controller.rb, line 24</span>
+            <pre><span class="ruby-comment"># File app/controllers/messages_controller.rb, line 28</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
   <span class="ruby-ivar">@messages</span> = <span class="ruby-constant">Message</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>.<span class="ruby-identifier">require</span>(<span class="ruby-value">:message</span>).<span class="ruby-identifier">permit</span>(<span class="ruby-value">:title</span>, <span class="ruby-value">:description</span>, <span class="ruby-value">:date</span>, <span class="ruby-value">:important</span>))
   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@messages</span>.<span class="ruby-identifier">save</span>
@@ -167,13 +167,13 @@
 
         <div class="method-description">
           
-          
+          <p>GET /messages</p>
           
           
 
           
           <div class="method-source-code" id="index-source">
-            <pre><span class="ruby-comment"># File app/controllers/messages_controller.rb, line 5</span>
+            <pre><span class="ruby-comment"># File app/controllers/messages_controller.rb, line 6</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
   <span class="ruby-comment"># messages =Message.page(params[:page]).per(6)</span>
   <span class="ruby-ivar">@messages</span> = <span class="ruby-constant">Message</span>.<span class="ruby-identifier">order</span>(<span class="ruby-string">&#39;created_at DESC&#39;</span>).<span class="ruby-identifier">page</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>]).<span class="ruby-identifier">per</span>(<span class="ruby-value">5</span>)
@@ -202,13 +202,13 @@
 
         <div class="method-description">
           
-          
+          <p>define params for require</p>
           
           
 
           
           <div class="method-source-code" id="message_params-source">
-            <pre><span class="ruby-comment"># File app/controllers/messages_controller.rb, line 33</span>
+            <pre><span class="ruby-comment"># File app/controllers/messages_controller.rb, line 38</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">message_params</span>
   <span class="ruby-identifier">params</span>.<span class="ruby-identifier">require</span>(<span class="ruby-value">:message</span>).<span class="ruby-identifier">permit</span>(<span class="ruby-value">:title</span>, <span class="ruby-value">:description</span>, <span class="ruby-value">:date</span>, <span class="ruby-value">:important</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -235,13 +235,13 @@
 
         <div class="method-description">
           
-          
+          <p>GET /messages/new</p>
           
           
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/messages_controller.rb, line 11</span>
+            <pre><span class="ruby-comment"># File app/controllers/messages_controller.rb, line 13</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
   <span class="ruby-ivar">@message</span> = <span class="ruby-constant">Message</span>.<span class="ruby-identifier">new</span>
 <span class="ruby-keyword">end</span></pre>
@@ -268,13 +268,13 @@
 
         <div class="method-description">
           
-          
+          <p>GET /messages/1</p>
           
           
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/messages_controller.rb, line 15</span>
+            <pre><span class="ruby-comment"># File app/controllers/messages_controller.rb, line 18</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
   <span class="ruby-ivar">@message</span> = <span class="ruby-constant">Message</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
 
