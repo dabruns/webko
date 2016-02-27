@@ -1,7 +1,11 @@
 AllCops:
   Excludes:
     - db/**
+    # Die specs brauchen nicht ueberprueft werden
+    # wenn wir Sie grade bearbeiten
+    - spec/**
   Enabled: true
+
 
 
 # Wir haben versucht uns an die LineLength 80 zu halten
