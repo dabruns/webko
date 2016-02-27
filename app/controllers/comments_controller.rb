@@ -1,7 +1,5 @@
 # Der Controller wird fuer die Kommentarfunktion vom Schwarzen Brett benoetigt
 class CommentsController < ApplicationController
-
-
   # POST /messages
   def create
     @message = Message.find(params[:message_id])

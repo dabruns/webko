@@ -8,5 +8,10 @@ AllCops:
 # Nachdem wir fast alle line to long fehler behoben haben haben wir
 # uns dazu entschieden das die verbliebenden lines die über 80 sind
 # ok sind
-#Metrics/LineLength:
-#  Max: 100
+Metrics/LineLength:
+  Max: 100
+
+# Wir haben es auf 12 erhoeht weil wir den Fehler finden das
+# Es nicht schlimm ist wenn eine funktion keine 10 zeilen hat
+Metrics/MethodLength:
+  Max: 12
