@@ -1,5 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe Roomplan, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before :each do
+    @roomplan=Roomplan.new(usage: 'beispiel nutzung')
+  end
+
+  describe "#new" do
+    it "nimmt Parameter fuer Roomplan an" do
+      @roomplan.should be_an_instance_of Roomplan
+    end
+  end
 end

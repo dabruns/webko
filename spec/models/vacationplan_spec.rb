@@ -1,5 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe Vacationplan, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before :each do
+    @vacationplan=Vacationplan.new()
+  end
+
+  describe "#new" do
+    it "erstellt neues Objekt" do
+      @vacationplan.should be_an_instance_of Vacationplan
+    end
+  end
 end

@@ -1,5 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before :each do
+    comment=Comment.new(text: 'ein kommentar')
+  end
+
+  describe "#new" do
+    it "neues comment ohne message" do
+      @comment.should be_nil
+    end
+  end
 end
