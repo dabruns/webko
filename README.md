@@ -11,7 +11,6 @@ Dieses Readme beinhaltet Erläuterungen zu folgenden Punkten:<br>
 </ul>
 <br>
 <h2>Aufgabenstellung / Anforderungen des Stakeholders</h2>
-<p></p>
 
 <h2>Planung und Dokumentation der User Stories</h2>
 <p>Wir haben uns bei der Planung und Dokumentation der User Stories für Taiga.io entschieden, weil sich das Tool
