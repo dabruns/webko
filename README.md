@@ -1,4 +1,4 @@
-<h1>Readme</h1>
+<h1>Readme des Projektes 'Webko'</h1>
 
 Dieses Readme beinhaltet Erläuterungen zu folgenden Punkten:<br>
 
@@ -7,8 +7,10 @@ Dieses Readme beinhaltet Erläuterungen zu folgenden Punkten:<br>
 <li>Planung und Dokumentation der User Stories</li>
 <li>Automatisch generierte Dokumentation zum Projekt 'Webko'</li>
 <li>Systemvoraussetzungen / Installationshinweise</li>
-    <li>Service: Rubocop / RSpec Guard  / Tests</li>
+    <li>Login Daten</li>
+    <li>Service: Rubocop / RSpec Guard / Tests</li>
 <li>Heroku Deployment</li>
+
 </ol>
 
 <br>
@@ -42,23 +44,7 @@ einen Administrationsbereich, der die Verwaltung für Nutzer, Nutzergruppe, Auto
 <p>
 Die automatisch erstellte Dokumentation (rake doc:app) zu unserem Projekt ist unter folgendem Link zu finden:<br>
     <a href="http://doc.dbwebspace.de" target="_blank">Dokumentation (Online)</a><br>
-Die Rohdateien der Dokumentation beifnden sich im Unterordner /doc/
-    <br>
-    Aktueller Stand:<br>
-<br>
-    Files:      36<br>
-<br>
-   Classes:    20 (0 undocumented)<br>
-   Modules:     8 (0 undocumented)<br>
-<br>
-    Constants:   0 (0 undocumented)<br>
-    Attributes:  1 (0 undocumented)<br>
-    Methods:    40 (2 undocumented)<br>
-<br>
-    Total:      69 (2 undocumented)<br>
-    97.10% documented<br>
-
-</p>
+Die Rohdateien der Dokumentation beifnden sich im Unterordner "/doc/app".<br>
 
 <h2>Systemvoraussetzungen / Installationshinweise</h2>
 <p>
@@ -74,6 +60,24 @@ Diese sind zwingend vor der Nutzung der webbasierten Kommunikationsfläche auszu
 
 
 <h3>Systemabhängigkeiten</h3>
+class Car has_many :carevents<br>
+class Carevent belongs_to :car, belongs_to :user<br>
+<br>
+class Room has_many :roomplans<br>
+class Roomplan belongs_to :room, belongs_to :user<br>
+<br>
+class Comment belongs_to :message<br>
+class Message has_many :comments<br>
+<br>
+class Group has_many :user_groups, has_many :users<br>
+class User has_many :carevents, has_many :roomplans, has_many :user_groups, has_many :groups<br>
+class Role has_and_belongs_to_many :users<br>
+class UserGroup belongs_to :user, belongs_to :group<br>
+<br>
+class Vacationplan belongs_to :user<br>
+
+
+<h3>Konfiguration</h3>
 
     Zur Installation aller benötigten Gems folgenden Befehl ausführen:<br>
     <code>bundle install</code><br>
@@ -211,6 +215,24 @@ Die Datenbank wird wie folgt erstellt:<br>
 Um die Datenbank mit Tabellen und Inhalten zu füllen, werden folgende Befehle benötigt:<br>
 <code>rake db:migrate</code><br>
 <code>rake db:seed</code>
+</p>
+
+<h3>Login Daten</h3>
+<p>
+    Um alle Funktionen der webbasierten Kommunikationsoberfläche sehen und nutzen zu können, muss man eingeloggt sein.<br>
+    <br>
+    Normale 'User' können das schwarze Brett sehen, Mitteilungen erstellen und kommentieren. Er hat keine Berechtigungen
+    Mitteilungen oder Kommentare auf dem schwarzen Brett zu löschen. Zudem haben die 'User' die Möglichkeit die
+    vorhandenen Kalender zu nutzen. Die eigenen Einträge in dem jeweiligen Kalender können sie löschen und bearbeiten -
+    bei Einträgen anderer Nutzer ist dies nicht möglich. <br>
+    Login: "testuser"<br>
+    Password: "test1234"<br>
+    <br>
+    Der Administrator hat keine Einschränkungen. Er kann Beiträge/Einträge im Frontend oder Backend editieren und löschen.
+    'User' lassen sich ausschließlich über den Adminbereich erstellen. Die 'SignIn' Funktion ist bewusst deaktiviert. Dies
+    war ein Wunsch des Stakeholders.<br>
+    Login: "admin"<br>
+    Password: "test1234"<br>
 </p>
 
 <h3>Service: Rubocop / RSpec Guard  / Tests</h3>

@@ -20,7 +20,7 @@ class Ability
         can :read, :all
         can :create, :all
         can :update, :all
-        can :delete, :all
+        can :destroy, :all
       end
     else
       # nicht regestrierte nutzer
