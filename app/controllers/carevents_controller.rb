@@ -42,6 +42,7 @@ class CareventsController < ApplicationController
     notice_create = String.new('Eintrag wurde erfolgreich erstellt.')
     @carevent = Carevent.new(carevent_params)
     @carevent.user_id = current_user.id
+
     respond_to do |format|
       if @carevent.save
         format.html { redirect_to @carevent, notice: notice_create }
