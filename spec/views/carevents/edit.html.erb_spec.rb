@@ -5,7 +5,7 @@ RSpec.describe 'carevents/edit', type: :view do
     @carevent = assign(:carevent, Carevent.create!(
                                     title: 'MyString',
                                     description: 'MyText',
-                                    car: nil
+                                    car: FactoryGirl.create(:brumbrum)
     ))
   end
 

@@ -8,7 +8,6 @@ FactoryGirl.define do
     password_confirmation '12345678'
   end
 
-
   factory :admin do
     username = 'Benutzer'
     first_name = 'Team'
