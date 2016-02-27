@@ -22,16 +22,16 @@ Dieses Readme beinhaltet Erläuterungen zu folgenden Punkten:<br>
 </p>
 
 <h2>Dokumentation zum Projekt 'Webko'</h2>
-<p>Die automatisch erstellte Dokumentation (rake doc:app) zu unserem Projekt ist unter folgendem Link zu finden:<br>
+<>Die automatisch erstellte Dokumentation (rake doc:app) zu unserem Projekt ist unter folgendem Link zu finden:<br>
     <a href="http://doc.dbwebspace.de">Dokumentation (Online)</a><br>
     <a href="doc/app/README_rdoc.html">Dokumentation (Offline)</a><br>
     Aktueller Stand:<br>
-<code>
-    <p>Files:      36</p>
-
-   <p>Classes:    20 (0 undocumented)</p>
-    <p>Modules:     8 (0 undocumented)</p>
-
+<br>
+    Files:      36<br>
+<br>
+   Classes:    20 (0 undocumented)<br>
+   >Modules:     8 (0 undocumented)<br>
+<br>
     Constants:   0 (0 undocumented)<br>
     Attributes:  1 (0 undocumented)<br>
     Methods:    40 (2 undocumented)<br>
@@ -40,20 +40,19 @@ Dieses Readme beinhaltet Erläuterungen zu folgenden Punkten:<br>
     97.10% documented<br>
 <br>
     Elapsed: 0.5s
-    </code>
+
 </p>
 
 <h2>Systemvoraussetzungen / Installationshinweise</h2>
 <ul>
 
 <li>Ruby version</li>
-    <code>ruby 2.2.4p230</code>
+    ruby 2.2.4p230
 
 
 <li>Systemabhängigkeiten</li>
 
 <li>Konfiguration</li>
-    <code>
     Using rake 10.5.0<br>
     Using i18n 0.7.0<br>
     Using json 1.8.3<br>
@@ -61,7 +60,7 @@ Dieses Readme beinhaltet Erläuterungen zu folgenden Punkten:<br>
     Using thread_safe 0.3.5<br>
     Using builder 3.2.2<br>
     Using erubis 2.7.0<br>
-    Using mini_portile2 2.0.0<br>>
+    Using mini_portile2 2.0.0<br>
     Using rack 1.6.4<br>
     Using mime-types 2.99<br>
     Using sass 3.4.21<br>
@@ -173,7 +172,6 @@ Dieses Readme beinhaltet Erläuterungen zu folgenden Punkten:<br>
     Using devise 3.5.6<br>
     Using simple_calendar 2.0.6<br>
     Using activeadmin 1.0.0.pre2 from git://github.com/activeadmin/activeadmin.git (at master@f7483e3)<br>
-        </code>
     <li>Erstellung der Datenbank</li>
 
 <li>Initialisierung der Datenbank</li>
