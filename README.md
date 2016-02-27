@@ -5,8 +5,9 @@ Dieses Readme beinhaltet Erläuterungen zu folgenden Punkten:<br>
 <ol>
 <li>Aufgabenstellung / Anforderungen des Stakeholders</li>
 <li>Planung und Dokumentation der User Stories</li>
-<li>Dokumentation zum Projekt 'Webko'</li>
+<li>Automatisch generierte Dokumentation zum Projekt 'Webko'</li>
 <li>Systemvoraussetzungen / Installationshinweise</li>
+    <li>Service: Rubocop / RSpec Guard  / Tests</li>
 <li>Heroku Deployment</li>
 </ol>
 
@@ -36,7 +37,7 @@ einen Administrationsbereich, der die Verwaltung für Nutzer, Nutzergruppe, Auto
 </p>
 
 <h2>Dokumentation zum Projekt 'Webko'</h2>
-<>Die automatisch erstellte Dokumentation (rake doc:app) zu unserem Projekt ist unter folgendem Link zu finden:<br>
+Die automatisch erstellte Dokumentation (rake doc:app) zu unserem Projekt ist unter folgendem Link zu finden:<br>
     <a href="http://doc.dbwebspace.de">Dokumentation (Online)</a><br>
     <a href="doc/app/README_rdoc.html">Dokumentation (Offline)</a><br>
     Aktueller Stand:<br>
@@ -197,18 +198,24 @@ Diese sind zwingend vor der Nutzung der webbasierten Kommunikationsfläche auszu
     Using simple_calendar 2.0.6<br>
     Using activeadmin 1.0.0.pre2 from git://github.com/activeadmin/activeadmin.git (at master@f7483e3)<br>
 <h3>Erstellung der Datenbank</h3>
+Die Datenbank wird wie folgt erstellt:<br>
+<code>rake db:create</code>
 
 <h3>Initialisierung der Datenbank</h3>
+Um die Datenbank mit Tabellen und Inhalten zu füllen, werden folgende Befehle benötigt:<br>
+<code>rake db:migrate</code>
+<code>rake db:seed</code>
 
-
-<h3>Ausführung der RSpec Test</h3>
-
-
-
-Services (job queues, cache servers, search engines, etc.)
-
-
-
+<h3>Service: Rubocop / RSpec Guard  / Tests</h3>
+Rubocop und der RSpec Guard wurde in dem Projekt eingerichtet.<br>
+Zusammen mit dem Guard überprüft er das Projekt wie folgt:<br>
+<code>bundle exec guard</code><br>
+Damit der Guard korrekt arbeitet, muss Ruby mit "readline" installiert werden.<br>
+In den bereitgestellten virtuellen Maschinen ist dies der Fall.<br>
+<b>Ausführung der RSpec Test</b>
+Die hinterlegten RSpec Tests lassen sich mit<br>
+<code>rspec</code><br>
+ausführen.
 
 <h2>Heroku Deployment</h2>
 <p>Den aktuellesten Master Branch des Projektes 'Webko' haben wir auf Heroku deployt.<br>
