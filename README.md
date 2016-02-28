@@ -67,6 +67,7 @@ Diese sind zwingend vor der Nutzung der webbasierten Kommunikationsfläche auszu
 
 
 <h3>Systemabhängigkeiten</h3>
+<p>
 class Comment belongs_to :message<br>
 class Car has_many :carevents<br>
 class Carevent belongs_to :car, belongs_to :user<br>
@@ -89,10 +90,11 @@ one user : many vacationplans<br>
 one group : many user_groups<br>
 one group : many users<br>
 </b>
+<p>
 
 
 <h3>Konfiguration</h3>
-
+<p>
     Zur Installation aller benötigten Gems folgenden Befehl ausführen: <br>
     <code>bundle install</code><br>
    <br>
