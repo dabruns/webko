@@ -6,6 +6,9 @@ abort('The Rails environment is running in production mode!') if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 require 'support/controller_macros'
+
+require 'factory_girl_rails'
+# FactoryGirl.find_definitions
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -39,6 +42,7 @@ RSpec.configure do |config|
   # instead of true.
   config.use_transactional_fixtures = true
 
+  #
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
   # `post` in specs under `spec/controllers`.
