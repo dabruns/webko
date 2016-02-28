@@ -14,4 +14,13 @@ module ControllerMacros
       sign_in user
     end
   end
+
+
+  def sign_in(user)
+    visit root_path
+    click_link 'Login'
+    fill_in 'user_login', with: user.username
+    fill_in 'user_password', with: '12345678'
+    click_button 'Log in'
+  end
 end
