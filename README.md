@@ -11,6 +11,7 @@ Dieses Readme beinhaltet Erläuterungen zu folgenden Punkten:<br>
     <li>Service: Rubocop / RSpec Guard / Tests</li>
 <li>Heroku Deployment</li>
     <li>Bedienungsanleitung</li>
+    <li>Zukünftige Features</li>
 
 </ol>
 
