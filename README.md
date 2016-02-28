@@ -93,7 +93,7 @@ one group : many users<br>
 
 <h3>Konfiguration</h3>
 
-    Zur Installation aller benötigten Gems folgenden Befehl ausführen:<br>
+    Zur Installation aller benötigten Gems folgenden Befehl ausführen: <br>
     <code>bundle install</code><br>
    <br>
     <b>Genutzte Gems:</b><br>
@@ -206,7 +206,7 @@ Using slop 3.6.0<br>
 Using spring 1.6.3<br>
 Using sprockets 3.5.2<br>
 Using sprockets-rails 3.0.1<br>
-Using sqlite3 1.3.11 <b>(wird unter localhost verwendet</b><br>
+Using sqlite3 1.3.11 <b>(wird unter localhost verwendet)</b><br>
 Using thor 0.19.1<br>
 Using thread_safe 0.3.5<br>
 Using tilt 2.0.2<br>
