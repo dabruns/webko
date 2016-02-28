@@ -29,7 +29,9 @@
         </div>
     <hr>
     <% end %>
+    <% if current_user.has_role?(:admin) %>
     <div id="button1"><p><%= link_to "Neue Nachricht anlegen", new_message_path%></p></div>
+    <% end %>
     <p><%= paginate @messages %></p>
   </div>
 </div>

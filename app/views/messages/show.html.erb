@@ -20,7 +20,7 @@
 
 <% @message.comments.each do |comment| %>
 <div class="comment">
-  <p id="user"> <%= current_user.email %> schreibt:</p><p>
+  <p id="user"> <%= comment.user %> schreibt:</p><p>
   <%= comment.text%> - vom <%= comment.created_at.strftime('%d.%m.%y um %H:%M Uhr') %>
   </p>
 </div>
@@ -29,6 +29,7 @@
 
 <%= form_for [@message, @message.comments.build] do |f| %>
   <p><%= f.text_area :text, :size => '10x10' %></p>
+    <%= f.hidden_field(:user, :value => current_user.email) %>
     <br>
   <p><%= f.submit "Kommentar senden"%></p>
 <%end%>
