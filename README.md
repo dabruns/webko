@@ -18,10 +18,11 @@ Dieses Readme beinhaltet Erläuterungen zu folgenden Punkten:<br>
 
 <h2>Aufgabenstellung / Anforderungen des Stakeholders</h2>
 <p>
-    Der Stakeholder ist unserem Fall die Multifit GmbH & Co.KG. Zur Verbesserung der Kommunikation innerhalb
-des Betriebs wurden wir beauftragt, eine möglichst einfache Kommunikationsplattform zu erstellen. Die
-Hauptfunktion ist hierbei das schwarze Brett. Die Administration (der EDV) bzw. die Geschäftsführung hat die
-    Möglichkeit wichtige Bekanntmachungen/Anliegen/Informationen zu verfassen. Die Mitarbeiter können diese bei Bedarf kommentieren.
+    Der Stakeholder ist unserem Fall die Multifit GmbH & Co.KG. Multifit deckt die Rehatechnik sowie den Sonderbau für
+    Schwerstbehinderte- und Kinderversorgungen ab. Weiterhin steht die personliche Beratung als Komplettversorger im Gesundheitswesen im Mittelpunkt.
+    Zur Verbesserung der Kommunikation innerhalb des Betriebs wurden wir beauftragt,
+    eine möglichst einfache Kommunikationsplattform zu erstellen. Die Hauptfunktion ist hierbei das schwarze Brett.
+    Die Administration (der EDV) bzw. die Geschäftsführung hat die Möglichkeit wichtige Bekanntmachungen/Anliegen/Informationen zu verfassen.Die Mitarbeiter können diese bei Bedarf kommentieren.
 Zusätzlich wurden zur besseren Planung drei unabhängige Kalender erstellt. Dies ist zunächst ein Kalender
 für die Nutzung von Kraftfahrzeugen; in diesem können Mitarbeiter Zeiträume eintragen, wann sie ein bestimmtes
 Auto benötigen. Die gleiche Funktion hat der Kalender für die Raumplanung. Hier werden allerdings Räume für die
@@ -58,9 +59,15 @@ Diese sind zwingend vor der Nutzung der webbasierten Kommunikationsfläche auszu
     ruby 2.2.4p230
 <h3>Rails Version</h3>
     Rails 4.2.5.1
+<h3>Browser Kompatibilität</h3>
+<p>
+    Die Ansicht wurde für <b>Mozilla Firefox</b> optimiert.<br>
+    Für andere Browser können wir keine optimale Ansicht garantieren.
+</p>
 
 
 <h3>Systemabhängigkeiten</h3>
+<p>
 class Comment belongs_to :message<br>
 class Car has_many :carevents<br>
 class Carevent belongs_to :car, belongs_to :user<br>
@@ -83,13 +90,12 @@ one user : many vacationplans<br>
 one group : many user_groups<br>
 one group : many users<br>
 </b>
-
-
+<p>
 
 
 <h3>Konfiguration</h3>
-
-    Zur Installation aller benötigten Gems folgenden Befehl ausführen:<br>
+<p>
+    Zur Installation aller benötigten Gems folgenden Befehl ausführen: <br>
     <code>bundle install</code><br>
    <br>
     <b>Genutzte Gems:</b><br>
@@ -202,7 +208,7 @@ Using slop 3.6.0<br>
 Using spring 1.6.3<br>
 Using sprockets 3.5.2<br>
 Using sprockets-rails 3.0.1<br>
-Using sqlite3 1.3.11 <b>(wird unter localhost verwendet</b><br>
+Using sqlite3 1.3.11 <b>(wird unter localhost verwendet)</b><br>
 Using thor 0.19.1<br>
 Using thread_safe 0.3.5<br>
 Using tilt 2.0.2<br>
@@ -233,7 +239,7 @@ Um die Datenbank mit Tabellen und Inhalten zu füllen, werden folgende Befehle b
 
 <h3>Start des Servers</h3>
 <p>
-    Nach erfologreicher Durchführung der vorherigen Schritte, wird der Start des Servers wie folgt, ausgeführt:<br>
+    Nach erfolgreicher Durchführung der vorherigen Schritte, wird der Start des Servers wie folgt, ausgeführt:<br>
     <code>rails s</code>
 </p>
 
@@ -249,9 +255,9 @@ Um die Datenbank mit Tabellen und Inhalten zu füllen, werden folgende Befehle b
     Password: "test1234"<br>
     <br>
     Der Administrator hat keine Einschränkungen. Er kann Beiträge/Einträge im Frontend oder Backend editieren und löschen.
-    'User' lassen sich ausschließlich über den Adminbereich erstellen. Die 'SignIn' Funktion ist bewusst deaktiviert.
-    <b>Sie können auf den Adminbereich zugreifen, indem Sie "/admin" hinter die Haupturl eintragen.</b> Dies
-    ist ein Wünsche bzw. Anforderungen des Stakeholders.<br>
+    'User' lassen sich ausschließlich über den Adminbereich erstellen. Die Registrierung ist bewusst deaktiviert.
+    <b>Sie können auf den Adminbereich zugreifen, indem Sie "/admin" hinter die Rooturl eintragen.</b> Dies
+    sind Anforderungen des Stakeholders.<br>
     Login: "admin"<br>
     Password: "test1234"<br>
 </p>
@@ -274,7 +280,7 @@ Seperat lassen sich mit<br>
 </p>
 
 <h2>Heroku Deployment</h2>
-<p>Den aktuellesten Master Branch des Projektes 'Webko' haben wir auf Heroku deployt.<br>
+<p>Den aktuellsten Master Branch des Projektes 'Webko' haben wir auf Heroku veröffentlicht.<br>
 Die URL lautet <a href="https://webko.herokuapp.com/" target="_blank"> https://webko.herokuapp.com/</a>
 </p>
 
@@ -282,4 +288,15 @@ Die URL lautet <a href="https://webko.herokuapp.com/" target="_blank"> https://w
 <p>
     Eine Anleitung (als *.pdf) zur Bedienung der Seite (für den einfachen Nutzer) ist unter folgendem Link zu finden:<br>
     <a href="http://doc.dbwebspace.de/bedienungsanleitung.pdf" target="_blank">Bedienungsanleitung.pdf</a><br>
+</p>
+
+<h2>Zukünftige Features</h2>
+<p>Während der Projektarbeit wurden weitere Features erarbeitet jedoch nicht implementiert. Zu den interessantesten
+    Ideen gehören
+    <ul>
+    <li>Aufgabenverteilung</li>
+    <li>Eventplanung und Umfragen</li>
+    <li>Hinterlegungsfunktion für Daten (z.B. Preislisten, Bilder, Präsentationen, etc.)</li>
+</ul>
+Weitere Vorschläge werden in unserem Taiga.io Projekt genannt.
 </p>
