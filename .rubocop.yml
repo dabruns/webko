@@ -10,8 +10,6 @@ AllCops:
     - spec/**
   Enabled: true
 
-
-
 # Wir haben versucht uns an die LineLength 80 zu halten
 # Nachdem wir fast alle line to long fehler behoben haben haben wir
 # uns dazu entschieden das die verbliebenden lines ok sind
@@ -22,12 +20,6 @@ Metrics/LineLength:
 # Es nicht schlimm ist wenn eine funktion keine 10 zeilen hat
 Metrics/MethodLength:
   Max: 12
-
-Lint/DuplicatedKey:
-    Exclude:
-      - 'app/models/carevent.rb'
-      - 'app/models/roomplan.rb'
-      - 'app/models/vacationplan.rb'
 
 Metrics/AbcSize:
     Max: 17
