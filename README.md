@@ -62,12 +62,18 @@ Diese sind zwingend vor der Nutzung der webbasierten Kommunikationsfläche auszu
 <h3>Systemabhängigkeiten</h3>
 class Car has_many :carevents<br>
 class Carevent belongs_to :car, belongs_to :user<br>
+<b>one car : many carevents</b><br>
+<b>one user : many carevents</b><br>
 <br>
 class Room has_many :roomplans<br>
 class Roomplan belongs_to :room, belongs_to :user<br>
+<b>one room : many roomplans </b><br>
+<b>one user : many roomplans</b><br>
 <br>
 class Comment belongs_to :message<br>
 class Message has_many :comments<br>
+<b>one message : many comments </b><br>
+<b>one user : many carevents</b><br>
 <br>
 class Group has_many :user_groups, has_many :users<br>
 class User has_many :carevents, has_many :roomplans, has_many :user_groups, has_many :groups<br>
@@ -75,6 +81,7 @@ class Role has_and_belongs_to_many :users<br>
 class UserGroup belongs_to :user, belongs_to :group<br>
 <br>
 class Vacationplan belongs_to :user<br>
+<b>one user : many vacationplans</b>
 
 
 <h3>Konfiguration</h3>
@@ -83,126 +90,126 @@ class Vacationplan belongs_to :user<br>
     <code>bundle install</code><br>
    <br>
     <b>Genutzte Gems:</b><br>
-
-    Using rake 10.5.0<br>
-    Using i18n 0.7.0<br>
-    Using json 1.8.3<br>
-    Using minitest 5.8.4<br>
-    Using thread_safe 0.3.5<br>
-    Using builder 3.2.2<br>
-    Using erubis 2.7.0<br>
-    Using mini_portile2 2.0.0<br>
-    Using rack 1.6.4<br>
-    Using mime-types 2.99<br>
-    Using sass 3.4.21<br>
-    Using thor 0.19.1<br>
-    Using coffee-script-source 1.10.0<br>
-    Using execjs 2.6.0<br>
-    Using formtastic_i18n 0.5.0<br>
-    Using arel 6.0.3<br>
-    Using bundler 1.11.2<br>
-    Using concurrent-ruby 1.0.0<br>
-    Using tilt 2.0.2<br>
-    Using ast 2.2.0<br>
-    Using bcrypt 3.1.10<br>
-    Using bcrypt-ruby 3.1.1.rc1<br>
-    Using debug_inspector 0.0.2<br>
-    Using byebug 8.2.2<br>
-    Using cancancan 1.13.1<br>
-    Using coderay 1.1.0<br>
-    Using orm_adapter 0.5.0<br>
-    Using diff-lcs 1.2.5<br>
-    Using ffi 1.9.10<br>
-    Using formatador 0.2.5<br>
-    Using rb-fsevent 0.9.7<br>
-    Using lumberjack 1.0.10<br>
-    Using nenv 0.3.0<br>
-    Using shellany 0.0.1<br>
-    Using method_source 0.8.2<br>
-    Using slop 3.6.0<br>
-    Using guard-compat 1.2.1<br>
-    Using rspec-support 3.4.1<br>
-    Using powerpack 0.1.1<br>
-    Using rainbow 2.1.0<br>
-    Using ruby-progressbar 1.7.5<br>
-    Using unicode-display_width 0.3.1<br>
-    Using multi_json 1.11.2<br>
-    Using pg 0.18.4<br>
-    Using puma 2.16.0<br>
-    Using rails_serve_static_assets 0.0.5<br>
-    Using rails_stdout_logging 0.0.4<br>
-    Using rolify 5.0.0<br>
-    Using spring 1.6.3<br>
-    Using sqlite3 1.3.11<br>
-    Using timeliness 0.3.8<br>
-    Using faker 1.6.1<br>
-    Using rdoc 4.2.2<br>
-    Using tzinfo 1.2.2<br>
-    Using nokogiri 1.6.7.2<br>
-    Using rack-test 0.6.3<br>
-    Using warden 1.2.6<br>
-    Using mail 2.6.3<br>
-    Using bourbon 4.2.6<br>
-    Using coffee-script 2.4.1<br>
-    Using autoprefixer-rails 6.3.3<br>
-    Using uglifier 2.7.2<br>
-    Using sprockets 3.5.2<br>
-    Using parser 2.3.0.6<br>
-    Using binding_of_caller 0.7.2<br>
-    Using rb-inotify 0.9.7<br>
-    Using notiffany 0.0.8<br>
-    Using pry 0.10.3<br>
-    Using rspec-core 3.4.2<br>
-    Using rspec-expectations 3.4.0<br>
-    Using rspec-mocks 3.4.1<br>
-    Using rails_12factor 0.0.3<br>
-    Using validates_timeliness 4.0.2<br>
-    Using sdoc 0.4.1<br>
-    Using activesupport 4.2.5.1<br>
-    Using loofah 2.0.3<br>
-    Using bootstrap-sass 3.3.6<br>
-    Using rubocop 0.37.2<br>
-    Using listen 3.0.6<br>
-    Using rspec 3.4.0<br>
-    Using rails-deprecated_sanitizer 1.0.3<br>
-    Using globalid 0.3.6<br>
-    Using arbre 1.0.3<br>
-    Using activemodel 4.2.5.1<br>
-    Using factory_girl 4.5.0<br>
-    Using jbuilder 2.4.1<br>
-    Using rails-html-sanitizer 1.0.3<br>
-    Using guard 2.13.0<br>
-    Using rails-dom-testing 1.0.7<br>
-    Using activejob 4.2.5.1<br>
-    Using activerecord 4.2.5.1<br>
-    Using guard-rspec 4.6.4<br>
-    Using guard-rubocop 1.2.0<br>
-    Using actionview 4.2.5.1<br>
-    Using polyamorous 1.3.0<br>
-    Using actionpack 4.2.5.1<br>
-    Using actionmailer 4.2.5.1<br>
-    Using railties 4.2.5.1<br>
-    Using formtastic 3.1.3<br>
-    Using has_scope 0.6.0<br>
-    Using kaminari 0.16.3<br>
-    Using sprockets-rails 3.0.1<br>
-    Using ransack 1.7.0<br>
-    Using simple_form 3.2.1<br>
-    Using coffee-rails 4.1.1<br>
-    Using responders 2.1.1<br>
-    Using jquery-rails 4.1.0<br>
-    Using jquery-ui-rails 5.0.5<br>
-    Using factory_girl_rails 4.6.0<br>
-    Using rails-i18n 4.0.8<br>
-    Using rspec-rails 3.4.2<br>
-    Using rails 4.2.5.1<br>
-    Using sass-rails 5.0.4<br>
-    Using web-console 2.3.0<br>
-    Using turbolinks 2.5.3<br>
-    Using inherited_resources 1.6.0<br>
-    Using devise 3.5.6<br>
-    Using simple_calendar 2.0.6<br>
-    Using activeadmin 1.0.0.pre2 from git://github.com/activeadmin/activeadmin.git (at master@f7483e3)<br>
+<br>
+Using actionmailer 4.2.5.1<br>
+Using actionpack 4.2.5.1<br>
+Using actionview 4.2.5.1<br>
+Using activeadmin 1.0.0.pre2 from git://github.com/activeadmin/activeadmin.git (at master@f7483e3)<br>
+Using activejob 4.2.5.1<br>
+Using activemodel 4.2.5.1<br>
+Using activerecord 4.2.5.1<br>
+Using activesupport 4.2.5.1<br>
+Using arbre 1.0.3<br>
+Using arel 6.0.3<br>
+Using ast 2.2.0<br>
+Using autoprefixer-rails 6.3.3<br>
+Using bcrypt 3.1.10<br>
+Using bcrypt-ruby 3.1.1.rc1<br>
+Using binding_of_caller 0.7.2<br>
+Using bootstrap-sass 3.3.6<br>
+Using bourbon 4.2.6<br>
+Using builder 3.2.2<br>
+Using bundler 1.11.2<br>
+Using byebug 8.2.2<br>
+Using cancancan 1.13.1<br>
+Using coderay 1.1.0<br>
+Using coffee-rails 4.1.1<br>
+Using coffee-script 2.4.1<br>
+Using coffee-script-source 1.10.0<br>
+Using concurrent-ruby 1.0.0<br>
+Using debug_inspector 0.0.2<br>
+Using devise 3.5.6<br>
+Using diff-lcs 1.2.5<br>
+Using erubis 2.7.0<br>
+Using execjs 2.6.0<br>
+Using factory_girl 4.5.0<br>
+Using factory_girl_rails 4.6.0<br>
+Using faker 1.6.1<br>
+Using ffi 1.9.10<br>
+Using formatador 0.2.5<br>
+Using formtastic 3.1.3<br>
+Using formtastic_i18n 0.5.0<br>
+Using globalid 0.3.6<br>
+Using guard 2.13.0<br>
+Using guard-compat 1.2.1<br>
+Using guard-rspec 4.6.4<br>
+Using guard-rubocop 1.2.0<br>
+Using has_scope 0.6.0<br>
+Using i18n 0.7.0<br>
+Using inherited_resources 1.6.0<br>
+Using jbuilder 2.4.1<br>
+Using jquery-rails 4.1.0<br>
+Using jquery-ui-rails 5.0.5<br>
+Using json 1.8.3<br>
+Using kaminari 0.16.3<br>
+Using listen 3.0.6<br>
+Using loofah 2.0.3<br>
+Using lumberjack 1.0.10<br>
+Using mail 2.6.3<br>
+Using method_source 0.8.2<br>
+Using mime-types 2.99<br>
+Using mini_portile2 2.0.0<br>
+Using minitest 5.8.4<br>
+Using multi_json 1.11.2<br>
+Using nenv 0.3.0<br>
+Using nokogiri 1.6.7.2<br>
+Using notiffany 0.0.8<br>
+Using orm_adapter 0.5.0<br>
+Using parser 2.3.0.6<br>
+Using pg 0.18.4 <b>(wird unter Heroku verwendet)</b><br>
+Using polyamorous 1.3.0<br>
+Using powerpack 0.1.1<br>
+Using pry 0.10.3<br>
+Using puma 2.16.0 <b>(wird unter localhost verwendet)</b><br>
+Using rack 1.6.4<br>
+Using rack-test 0.6.3<br>
+Using rails 4.2.5.1<br>
+Using rails_12factor 0.0.3<br>
+Using rails_serve_static_assets 0.0.5<br>
+Using rails_stdout_logging 0.0.4<br>
+Using rails-deprecated_sanitizer 1.0.3<br>
+Using rails-dom-testing 1.0.7<br>
+Using rails-html-sanitizer 1.0.3<br>
+Using rails-i18n 4.0.8<br>
+Using railties 4.2.5.1<br>
+Using rainbow 2.1.0<br>
+Using rake 10.5.0<br>
+Using ransack 1.7.0<br>
+Using rb-fsevent 0.9.7<br>
+Using rb-inotify 0.9.7<br>
+Using rdoc 4.2.2<br>
+Using responders 2.1.1<br>
+Using rolify 5.0.0<br>
+Using rspec 3.4.0<br>
+Using rspec-core 3.4.2<br>
+Using rspec-expectations 3.4.0<br>
+Using rspec-mocks 3.4.1<br>
+Using rspec-rails 3.4.2<br>
+Using rspec-support 3.4.1<br>
+Using rubocop 0.37.2<br>
+Using ruby-progressbar 1.7.5<br>
+Using sass 3.4.21<br>
+Using sass-rails 5.0.4<br>
+Using sdoc 0.4.1<br>
+Using shellany 0.0.1<br>
+Using simple_calendar 2.0.6<br>
+Using simple_form 3.2.1<br>
+Using slop 3.6.0<br>
+Using spring 1.6.3<br>
+Using sprockets 3.5.2<br>
+Using sprockets-rails 3.0.1<br>
+Using sqlite3 1.3.11 <b>(wird unter localhost verwendet</b><br>
+Using thor 0.19.1<br>
+Using thread_safe 0.3.5<br>
+Using tilt 2.0.2<br>
+Using timeliness 0.3.8<br>
+Using turbolinks 2.5.3<br>
+Using tzinfo 1.2.2<br>
+Using uglifier 2.7.2<br>
+Using unicode-display_width 0.3.1<br>
+Using validates_timeliness 4.0.2<br>
+Using warden 1.2.6<br>
+Using web-console 2.3.0<br>
 </p>
 <h3>Erstellung der Datenbank</h3>
 <p>
@@ -214,7 +221,16 @@ Die Datenbank wird wie folgt erstellt:<br>
 <p>
 Um die Datenbank mit Tabellen und Inhalten zu füllen, werden folgende Befehle benötigt:<br>
 <code>rake db:migrate</code><br>
-<code>rake db:seed</code>
+<code>rake db:seed</code><br>
+    Falls Probleme bei der Erstellung der Datenbank auftreten sollten, haben sich folgende zwei Befehle bewährt:<br>
+    <code>rake db:drop</code><br>
+    <code>rake db:reset</code>
+</p>
+
+<h3>Start des Servers</h3>
+<p>
+    Nach erfologreicher Durchführung der vorherigen Schritte, wird der Start des Servers wie folgt, ausgeführt:<br>
+    <code>rails s</code>
 </p>
 
 <h3>Login Daten</h3>
@@ -235,17 +251,21 @@ Um die Datenbank mit Tabellen und Inhalten zu füllen, werden folgende Befehle b
     Password: "test1234"<br>
 </p>
 
-<h3>Service: Rubocop / RSpec Guard  / Tests</h3>
+<h3>Service: Rubocop / RSpec Tests / Guard</h3>
 <p>
-Rubocop und der RSpec Guard wurde in dem Projekt eingerichtet.<br>
-Zusammen mit dem Guard überprüft er das Projekt wie folgt:<br>
+Rubocop und RSpec Test wurde in dem Projekt eingerichtet.<br>
+Mit dem Guard werden Rubocop und die RSpec Tests automatisch ausgeführt:<br>
 <code>bundle exec guard</code><br>
 Damit der Guard korrekt arbeitet, muss Ruby mit "readline" installiert werden.<br>
 In den bereitgestellten virtuellen Maschinen ist dies der Fall.<br>
 <b>Ausführung der RSpec Test</b><br>
-Die hinterlegten RSpec Tests lassen sich mit<br>
-<code>rspec</code><br>
-ausführen.
+Seperat lassen sich mit<br>
+<code>bundle exec rspec</code><br>
+    die RSpec Tests ausführen.<br>
+    <b>Ausführung von Rubocop</b><br>
+    Rubocop wird mit<br>
+    <code>bundle exec rubocop</code><br>
+    ausführen.
 </p>
 
 <h2>Heroku Deployment</h2>
