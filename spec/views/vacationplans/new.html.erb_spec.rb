@@ -7,7 +7,7 @@ RSpec.describe 'vacationplans/new', type: :view do
     ))
   end
 
-  it 'renders new vacationplan form' do
+  xit 'renders new vacationplan form' do
     render
 
     assert_select 'form[action=?][method=?]', vacationplans_path, 'post' do

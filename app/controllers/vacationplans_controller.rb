@@ -13,8 +13,12 @@ class VacationplansController < ApplicationController
   # check authentification
   def check_auth
     if current_user.id != @vacationplan.user_id
-      flash[:notice] = 'Sie können Einträge anderer Nutzer nicht ändern / löschen'
-      redirect_to vacationplan_path
+      if current_user.has_role?(:admin)
+        # Admins duerfen loeschen
+      else
+        flash[:notice] = 'Sie können Einträge anderer Nutzer nicht ändern / löschen'
+        redirect_to vacationplan_path
+      end
     end
   end
 

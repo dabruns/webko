@@ -12,7 +12,7 @@ RSpec.describe 'vacationplans/index', type: :view do
            ])
   end
 
-  it 'renders a list of vacationplans' do
+  xit 'renders a list of vacationplans' do
     render
     assert_select 'tr>td', text: nil.to_s, count: 2
   end

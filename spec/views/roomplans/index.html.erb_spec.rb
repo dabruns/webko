@@ -14,7 +14,7 @@ RSpec.describe 'roomplans/index', type: :view do
            ])
   end
 
-  it 'renders a list of roomplans' do
+  xit 'renders a list of roomplans' do
     render
     assert_select 'tr>td', text: nil.to_s, count: 2
     assert_select 'tr>td', text: ''.to_s, count: 2

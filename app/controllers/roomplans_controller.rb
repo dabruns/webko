@@ -14,8 +14,12 @@ class RoomplansController < ApplicationController
   # check authentification
   def check_auth
     if current_user.id != @roomplan.user_id
-      flash[:notice] = 'Sie können Einträge anderer Nutzer nicht ändern / löschen'
-      redirect_to roomplan_path
+      if current_user.has_role?(:admin)
+        # Admins duerfen loeschen
+      else
+        flash[:notice] = 'Sie können Einträge anderer Nutzer nicht ändern / löschen'
+        redirect_to roomplan_path
+      end
     end
   end
 
