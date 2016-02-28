@@ -7,7 +7,7 @@ AllCops:
     - test/test_helper.rb
     # Die specs brauchen nicht ueberprueft werden
     # wenn wir Sie grade bearbeiten
-    #- spec/**
+    - spec/**
   Enabled: true
 
 # Wir haben versucht uns an die LineLength 80 zu halten
@@ -22,4 +22,4 @@ Metrics/MethodLength:
   Max: 12
 
 Metrics/AbcSize:
-    Max: 17
+  Max: 17
