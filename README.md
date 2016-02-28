@@ -37,7 +37,7 @@ einen Administrationsbereich, der die Verwaltung für Nutzer, Nutzergruppen, Aut
     Link zu finden:<br>
     <a href="https://tree.taiga.io/project/derschleicher-we-ii/kanban" target="_blank">
         https://tree.taiga.io/project/derschleicher-we-ii/kanban</a><br>
-    (Login über Github Account möglich - Einladung versandt)
+    (Login über 'malagant_we2_project' - Passwort: 'test1234')
 
 </p>
 
