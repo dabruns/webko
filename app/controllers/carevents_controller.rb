@@ -17,8 +17,12 @@ class CareventsController < ApplicationController
   def check_auth
     notice_check_auth = String.new('Sie können Einträge anderer Nutzer nicht ändern / löschen')
     if current_user.id != @carevent.user_id
-      flash[:notice] = notice_check_auth
-      redirect_to carevent_path
+      if current_user.has_role?(:admin)
+        # Admins duerfen loeschen
+      else
+        flash[:notice] = notice_check_auth
+        redirect_to carevent_path
+      end
     end
   end
 

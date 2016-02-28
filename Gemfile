@@ -9,9 +9,6 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -21,25 +18,20 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+
+gem 'activeadmin', github: 'activeadmin'
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.1.1.rc1', require: 'bcrypt'
-gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'cancancan'
-gem 'rolify'
-gem 'activeadmin', github: 'activeadmin'
-gem 'simple_calendar'
-gem 'sprockets-rails'
-gem 'rails-i18n'
-gem 'validates_timeliness'
-gem 'simple_form'
+gem 'devise'
 gem 'kaminari'
-
-# Use Unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'rails-i18n'
+gem 'rolify'
+gem 'sprockets-rails'
+gem 'simple_calendar'
+gem 'simple_form'
+gem 'validates_timeliness'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution
@@ -48,31 +40,25 @@ group :development, :test do
 end
 
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
-
-  # Spring speeds up development by keeping your application running
-  # in the background.Read more: https://github.com/rails/spring
-  gem 'spring'
-
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
-
+  gem 'factory_girl_rails'
+  gem 'faker'
   # Guard Gem
   gem 'guard'
-
-  gem 'rspec-rails'
   # Rspec und rubocop
   gem 'guard-rspec', require: false
   gem 'guard-rubocop'
-
-  gem 'factory_girl_rails'
-  gem 'faker'
+  gem 'rspec-rails'
+  # Spring speeds up development by keeping your application running
+  # in the background.Read more: https://github.com/rails/spring
+  gem 'spring'
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
+  # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'web-console', '~> 2.0'
 end
 
 group :production do
-  # postgresql for heroku
   gem 'pg'
-  gem 'rails_12factor'
   gem 'puma'
+  gem 'rails_12factor'
 end

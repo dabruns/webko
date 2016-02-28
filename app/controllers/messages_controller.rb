@@ -1,8 +1,6 @@
 # Der Controller wird fuer die Nachrichten auf
 # dem Schwarzen Brett benoetigt
 class MessagesController < ApplicationController
-
-
   # GET /messages
   def index
     # messages =Message.page(params[:page]).per(6)

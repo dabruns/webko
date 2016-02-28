@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe MessagesController, type: :controller do
-  login_admin
   describe 'GET #index' do
     it 'returns http success' do
       get :index
