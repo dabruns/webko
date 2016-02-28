@@ -8,17 +8,21 @@ RSpec.feature 'Log in',
     let(:user) { FactoryGirl.create(:user) }
 
     before(:each) do
-      sign_in user
+      visit root_path
+      click_link 'Login'
+      fill_in 'user_login', with: user.username
+      fill_in 'user_password', with: '12345678'
+      click_button 'Log in'
     end
 
     scenario 'Login' do
-      expect(page).to have_content "Welcome, #{user.email}"
+      expect(page).to have_content "Eingeloggt als: #{user.first_name}" + ' ' + user.last_name.to_s
     end
 
     scenario 'Logout' do
-      click_link user.email
-      expect(page).to_not have_content "Welcome, #{user.email}"
-      expect(page).to have_content 'Sign in'
+      click_link 'Logout'
+      expect(page).to_not have_content "Eingeloggt als: #{user.first_name}" + ' ' + user.last_name.to_s
+      expect(page).to have_content 'Login'
     end
   end
 end
