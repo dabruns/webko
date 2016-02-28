@@ -10,6 +10,7 @@ Dieses Readme beinhaltet Erläuterungen zu folgenden Punkten:<br>
     <li>Login Daten</li>
     <li>Service: Rubocop / RSpec Guard / Tests</li>
 <li>Heroku Deployment</li>
+    <li>Bedienungsanleitung</li>
 
 </ol>
 
@@ -24,9 +25,9 @@ Hauptfunktion ist hierbei das schwarze Brett. Die Administration (der EDV) bzw. 
 Zusätzlich wurden zur besseren Planung drei unabhängige Kalender erstellt. Dies ist zunächst ein Kalender
 für die Nutzung von Kraftfahrzeugen; in diesem können Mitarbeiter Zeiträume eintragen, wann sie ein bestimmtes
 Auto benötigen. Die gleiche Funktion hat der Kalender für die Raumplanung. Hier werden allerdings Räume für die
-Verwendung ausgewählt. Der dritte Kalender betrifft die Urlaubsplanung. Mitarbeiter haben können in diesem
-ihren genehmigten Urlaub eintragen. Abgerundet wird die webbasierte Kommunikationsoberfläche ('Webko') durch
-einen Administrationsbereich, der die Verwaltung für Nutzer, Nutzergruppe, Autos und Räume übernimmt.
+Verwendung ausgewählt. Der dritte Kalender betrifft die Urlaubsplanung. Mitarbeiter können in diesem
+ihren genehmigten Urlaub (ganztags/halbtags) eintragen. Abgerundet wird die webbasierte Kommunikationsoberfläche ('Webko') durch
+einen Administrationsbereich, der die Verwaltung für Nutzer, Nutzergruppen, Autos und Räume übernimmt.
 </p>
 
 <h2>Planung und Dokumentation der User Stories</h2>
@@ -190,6 +191,7 @@ Using rubocop 0.37.2<br>
 Using ruby-progressbar 1.7.5<br>
 Using sass 3.4.21<br>
 Using sass-rails 5.0.4<br>
+Using seed_dump 3.2.4
 Using sdoc 0.4.1<br>
 Using shellany 0.0.1<br>
 Using simple_calendar 2.0.6<br>
@@ -245,8 +247,9 @@ Um die Datenbank mit Tabellen und Inhalten zu füllen, werden folgende Befehle b
     Password: "test1234"<br>
     <br>
     Der Administrator hat keine Einschränkungen. Er kann Beiträge/Einträge im Frontend oder Backend editieren und löschen.
-    'User' lassen sich ausschließlich über den Adminbereich erstellen. Die 'SignIn' Funktion ist bewusst deaktiviert. Dies
-    war ein Wunsch des Stakeholders.<br>
+    'User' lassen sich ausschließlich über den Adminbereich erstellen. Die 'SignIn' Funktion ist bewusst deaktiviert.
+    <b>Sie können auf den Adminbereich zugreifen, indem Sie "/admin" hinter die Haupturl eintragen.</b> Dies
+    ist ein Wünsche bzw. Anforderungen des Stakeholders.<br>
     Login: "admin"<br>
     Password: "test1234"<br>
 </p>
@@ -265,7 +268,7 @@ Seperat lassen sich mit<br>
     <b>Ausführung von Rubocop</b><br>
     Rubocop wird mit<br>
     <code>bundle exec rubocop</code><br>
-    ausführen.
+    ausgeführt.
 </p>
 
 <h2>Heroku Deployment</h2>
@@ -273,3 +276,8 @@ Seperat lassen sich mit<br>
 Die URL lautet <a href="https://webko.herokuapp.com/" target="_blank"> https://webko.herokuapp.com/</a>
 </p>
 
+<h2>Bedienungsanleitung</h2>
+<p>
+    Eine Anleitung (als *.pdf) zur Bedienung der Seite (für den einfachen Nutzer) ist unter folgendem Link zu finden:<br>
+    <a href="http://doc.dbwebspace.de/bedienungsanleitung.pdf">Bedienungsanleitung.pdf</a><br>
+</p>
