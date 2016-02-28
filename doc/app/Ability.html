@@ -147,17 +147,17 @@ der einzelnen Nutzer</p>
       <span class="ruby-comment"># Admins</span>
       <span class="ruby-identifier">can</span> <span class="ruby-value">:manage</span>, <span class="ruby-value">:all</span>
     <span class="ruby-keyword">else</span>
-      <span class="ruby-comment">#keine Admins</span>
+      <span class="ruby-comment"># keine Admins</span>
 
       <span class="ruby-comment"># Wenn sich jemand Fragt warum ein else braucht</span>
       <span class="ruby-comment"># Das haengt damit zusammen das die Funktionen wo der benutzer</span>
-      <span class="ruby-comment"># nur eingeschrenkte rechte hab konnten aus Zeitgründen</span>
+      <span class="ruby-comment"># nur eingeschrenkte rechte hab konnten aus Zeitgruenden</span>
       <span class="ruby-comment"># im SEII Projekt nicht umgesetzt werden</span>
-      <span class="ruby-comment"># Später werde die Funktionen noch eingeschraenkt</span>
+      <span class="ruby-comment"># Spaeter werde die Funktionen noch eingeschraenkt</span>
       <span class="ruby-identifier">can</span> <span class="ruby-value">:read</span>, <span class="ruby-value">:all</span>
       <span class="ruby-identifier">can</span> <span class="ruby-value">:create</span>, <span class="ruby-value">:all</span>
       <span class="ruby-identifier">can</span> <span class="ruby-value">:update</span>, <span class="ruby-value">:all</span>
-      <span class="ruby-identifier">can</span> <span class="ruby-value">:delete</span>, <span class="ruby-value">:all</span>
+      <span class="ruby-identifier">can</span> <span class="ruby-value">:destroy</span>, <span class="ruby-value">:all</span>
     <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">else</span>
     <span class="ruby-comment"># nicht regestrierte nutzer</span>
