@@ -61,28 +61,30 @@ Diese sind zwingend vor der Nutzung der webbasierten Kommunikationsfläche auszu
 
 
 <h3>Systemabhängigkeiten</h3>
+class Comment belongs_to :message<br>
 class Car has_many :carevents<br>
 class Carevent belongs_to :car, belongs_to :user<br>
-<b>one car : many carevents</b><br>
-<b>one user : many carevents</b><br>
-<br>
 class Room has_many :roomplans<br>
 class Roomplan belongs_to :room, belongs_to :user<br>
-<b>one room : many roomplans </b><br>
-<b>one user : many roomplans</b><br>
-<br>
-class Comment belongs_to :message<br>
-class Message has_many :comments<br>
-<b>one message : many comments </b><br>
-<b>one user : many carevents</b><br>
-<br>
+class Vacationplan belongs_to :user<br>
 class Group has_many :user_groups, has_many :users<br>
 class User has_many :carevents, has_many :roomplans, has_many :user_groups, has_many :groups<br>
 class Role has_and_belongs_to_many :users<br>
 class UserGroup belongs_to :user, belongs_to :group<br>
 <br>
-class Vacationplan belongs_to :user<br>
-<b>one user : many vacationplans</b>
+<b>
+one message : many comments<br>
+one car : many carevents<br>
+one room : many roomplans<br>
+one user : many roomplans<br>
+one user : many vacationplans<br>
+    one user : many carevents<br>
+    one user : many roles<br>
+one group : many user_groups<br>
+one group : many users<br>
+</b>
+
+
 
 
 <h3>Konfiguration</h3>
@@ -191,7 +193,7 @@ Using rubocop 0.37.2<br>
 Using ruby-progressbar 1.7.5<br>
 Using sass 3.4.21<br>
 Using sass-rails 5.0.4<br>
-Using seed_dump 3.2.4
+Using seed_dump 3.2.4<br>
 Using sdoc 0.4.1<br>
 Using shellany 0.0.1<br>
 Using simple_calendar 2.0.6<br>
@@ -279,5 +281,5 @@ Die URL lautet <a href="https://webko.herokuapp.com/" target="_blank"> https://w
 <h2>Bedienungsanleitung</h2>
 <p>
     Eine Anleitung (als *.pdf) zur Bedienung der Seite (für den einfachen Nutzer) ist unter folgendem Link zu finden:<br>
-    <a href="http://doc.dbwebspace.de/bedienungsanleitung.pdf">Bedienungsanleitung.pdf</a><br>
+    <a href="http://doc.dbwebspace.de/bedienungsanleitung.pdf" target="_blank">Bedienungsanleitung.pdf</a><br>
 </p>
